@@ -71,12 +71,13 @@
 //   shared_ptr<T> sp;    空智能指针，指向类型为T的对象
 //   mske_shared<T>(args);返回一个shared_ptr，指向一个 动态分配 的类型为T的对象，使用args初始化此对象
 //   shared_ptr<T>p(q);   p是shared_ptr q的拷贝，此操作会递增q的计数器，q的指针必须能转换为T*
+//   shared_ptr<T>p(q,d)  p接管了内置指针q所指向对象的所有权 q必须能转换为T*类型 p将使用可调用对象d来代替delete
 //   p = q;               p和q都是shared_ptr，所保存的指针必须能相互转换
 //                        此操作递减p的引用计数，递增q的引用计数(若p的引用计数变为0，则将其管理的原内存释放)
 //   p.use_count()        返回与p共享对象的智能指针数量
 //   p.unique()           若p.use_count()为1 返回true 否则返回false
 //   p.reset()            若p是唯一指向其对象的shared_ptr，reset会释放此对象 若传递了可选的参数内置指针q 会令p指向q
-//
+//   p.reset(q,d)         若还传递了参数d，将会调用d而不是delete来释放q
 //
 //   shared_ptr<T>p(q);   p管理内置指针q所指向的对象，q必须指向new分配的内存，且能够转换为T*类型
 //   shared_ptr<T>p(q,d); p管理内置指针q所指向的对象，q必须指向new分配的内存，且能够转换为T*类型
