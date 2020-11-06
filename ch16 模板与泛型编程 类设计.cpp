@@ -1,11 +1,11 @@
 /*
-1¡¢¶¨ÒåÄ£°å
+1ã€å®šä¹‰æ¨¡æ¿
     
-  º¯ÊýÄ£°å£º
+  å‡½æ•°æ¨¡æ¿ï¼š
 
-  (1)Ä£°åÀàÐÍ²ÎÊýT
+  (1)æ¨¡æ¿ç±»åž‹å‚æ•°T
 
-     ÀàÐÍÄ£°å²ÎÊýÇ°±ØÐëÊ¹ÓÃ¹Ø¼ü×Öclass»òtypename
+     ç±»åž‹æ¨¡æ¿å‚æ•°å‰å¿…é¡»ä½¿ç”¨å…³é”®å­—classæˆ–typename
 
   template<typename T>
   int compare(const T& v1,const T& v2)
@@ -14,79 +14,79 @@
         if(v1 > v2) return 1;
         return 0;
   }
-  Ä£°å²ÎÊýT±íÊ¾ÔÚÀà»òº¯Êý¶¨ÒåÖÐÓÃµ½µÄÀàÐÍ»òÖµ£¬µ±Ê¹ÓÃÄ£°åÊ±£¬ÎÒÃÇ¿ÉÒÔ
-  ÒþÊ½µÄ»òÕßÏÔÊ½µÄÖ¸¶¨Ä£°åÊµ²Î£¬½«Æä°ó¶¨µ½Ä£°å²ÎÊýÉÏ
+  æ¨¡æ¿å‚æ•°Tè¡¨ç¤ºåœ¨ç±»æˆ–å‡½æ•°å®šä¹‰ä¸­ç”¨åˆ°çš„ç±»åž‹æˆ–å€¼ï¼Œå½“ä½¿ç”¨æ¨¡æ¿æ—¶ï¼Œæˆ‘ä»¬å¯ä»¥
+  éšå¼çš„æˆ–è€…æ˜¾å¼çš„æŒ‡å®šæ¨¡æ¿å®žå‚ï¼Œå°†å…¶ç»‘å®šåˆ°æ¨¡æ¿å‚æ•°ä¸Š
 
-  //ÊµÀý»¯³öint compare(const int&,const int&);
-  cout << compare(1,0) << endl;  TÒþÊ½ÍÆ¶ÏÎªint
+  //å®žä¾‹åŒ–å‡ºint compare(const int&,const int&);
+  cout << compare(1,0) << endl;  Téšå¼æŽ¨æ–­ä¸ºint
 
-  //ÊµÀý»¯³öint compare(const vector<int>&,const vector<int>&);
+  //å®žä¾‹åŒ–å‡ºint compare(const vector<int>&,const vector<int>&);
   vector<int>vec(1,2,3),vec2(4,5,6);
-  cout << compare(vec1,vec2) << endl; TÒþÊ½ÍÆ¶ÏÎªvector<int>
+  cout << compare(vec1,vec2) << endl; Téšå¼æŽ¨æ–­ä¸ºvector<int>
 
-  ÕâÊÇ±àÒëÆ÷Éú³ÉµÄÁ½¸ö°æ±¾£¬ÕâÁ½¸ö°æ±¾Í³³ÆÎªÄ£°åµÄÊµÀý
+  è¿™æ˜¯ç¼–è¯‘å™¨ç”Ÿæˆçš„ä¸¤ä¸ªç‰ˆæœ¬ï¼Œè¿™ä¸¤ä¸ªç‰ˆæœ¬ç»Ÿç§°ä¸ºæ¨¡æ¿çš„å®žä¾‹
 
-  (2)·ÇÀàÐÍÄ£°å²ÎÊý
+  (2)éžç±»åž‹æ¨¡æ¿å‚æ•°
 
-     ·ÇÀàÐÍÄ£°å²ÎÊý±íÊ¾Ò»¸öÖµ¶ø²»ÊÇÒ»¸öÀàÐÍ
-     Í¨¹ýÒ»¸öÌØ¶¨µÄÀàÐÍÃû¶ø²»ÊÇ¹Ø¼ü×ÖclassºÍtypenameÀ´Ö¸¶¨·ÇÄ£°å²ÎÊý
+     éžç±»åž‹æ¨¡æ¿å‚æ•°è¡¨ç¤ºä¸€ä¸ªå€¼è€Œä¸æ˜¯ä¸€ä¸ªç±»åž‹
+     é€šè¿‡ä¸€ä¸ªç‰¹å®šçš„ç±»åž‹åè€Œä¸æ˜¯å…³é”®å­—classå’Œtypenameæ¥æŒ‡å®šéžæ¨¡æ¿å‚æ•°
 
-     ¾ÙÀý£º
+     ä¸¾ä¾‹ï¼š
      template<unsigned N,unsigned M>
      int compare(const char (&p1)[N],const char (&p2)[M])
      {
             return strcmp(p1,p2);
      }
-     µ÷ÓÃ£ºcompare("hello","world");
-     ÊµÀý»¯µÄ°æ±¾:
+     è°ƒç”¨ï¼šcompare("hello","world");
+     å®žä¾‹åŒ–çš„ç‰ˆæœ¬:
        int compare(const char (&p1)[3],const char (&p2)[4])
 
-    À©Õ¹£º·ÇÀàÐÍÄ£°å²ÎÊý¿ÉÒÔÊÇÄÚÖÃÊý¾ÝÀàÐÍ¡¢»òÕßÊÇÒ»¸öÖ¸Ïò¶ÔÏó»òº¯ÊýÀàÐÍµÄÖ¸Õë»òÒýÓÃ
-          °ó¶¨µ½·ÇÀàÐÍÕûÐÍ²ÎÊýµÄÊµ²Î±ØÐëÊÇÒ»¸ö³£Á¿±í´ïÊ½(±àÒë½×¶ÎÈ·¶¨½á¹û)
+    æ‰©å±•ï¼šéžç±»åž‹æ¨¡æ¿å‚æ•°å¯ä»¥æ˜¯å†…ç½®æ•°æ®ç±»åž‹ã€æˆ–è€…æ˜¯ä¸€ä¸ªæŒ‡å‘å¯¹è±¡æˆ–å‡½æ•°ç±»åž‹çš„æŒ‡é’ˆæˆ–å¼•ç”¨
+          ç»‘å®šåˆ°éžç±»åž‹æ•´åž‹å‚æ•°çš„å®žå‚å¿…é¡»æ˜¯ä¸€ä¸ªå¸¸é‡è¡¨è¾¾å¼(ç¼–è¯‘é˜¶æ®µç¡®å®šç»“æžœ)
 
-  (3)Ä£°åµÄ±àÒë
-     µ±±àÒëÆ÷Óöµ½Ò»¸öÄ£°å¶¨ÒåÊ±£¬Ëü²¢²»Éú³É´úÂë£¬Ö»ÓÐµ±ÎÒÃÇÊµÀý»¯³öÄ£°åµÄÒ»¸öÌØ¶¨°æ±¾Ê±
-     ±àÒëÆ÷²Å»áÉú³É´úÂë
-     Ò²¾ÍÊÇËµ£¬µ±ÎÒÃÇÊ¹ÓÃ¶ø²»ÊÇ¶¨ÒåÄ£°åÊ±£¬±àÒëÆ÷²Å»áÉú³É´úÂë
+  (3)æ¨¡æ¿çš„ç¼–è¯‘
+     å½“ç¼–è¯‘å™¨é‡åˆ°ä¸€ä¸ªæ¨¡æ¿å®šä¹‰æ—¶ï¼Œå®ƒå¹¶ä¸ç”Ÿæˆä»£ç ï¼Œåªæœ‰å½“æˆ‘ä»¬å®žä¾‹åŒ–å‡ºæ¨¡æ¿çš„ä¸€ä¸ªç‰¹å®šç‰ˆæœ¬æ—¶
+     ç¼–è¯‘å™¨æ‰ä¼šç”Ÿæˆä»£ç 
+     ä¹Ÿå°±æ˜¯è¯´ï¼Œå½“æˆ‘ä»¬ä½¿ç”¨è€Œä¸æ˜¯å®šä¹‰æ¨¡æ¿æ—¶ï¼Œç¼–è¯‘å™¨æ‰ä¼šç”Ÿæˆä»£ç 
 
-     ÎªÁËÊµÀý»¯³öÒ»¸ö°æ±¾£¬±àÒëÆ÷ÐèÒªÕÆÎÕº¯ÊýÄ£°å»òÀàÄ£°å³ÉÔ±º¯ÊýµÄ¶¨Òå
-     Òò´Ë£¬Óë·ÇÄ£°å´úÂë²»Í¬£¬Ä£°åµÄÍ·ÎÄ¼þÍ¨³£°üÀ¨ÉùÃ÷¼°¶¨Òå
+     ä¸ºäº†å®žä¾‹åŒ–å‡ºä¸€ä¸ªç‰ˆæœ¬ï¼Œç¼–è¯‘å™¨éœ€è¦æŽŒæ¡å‡½æ•°æ¨¡æ¿æˆ–ç±»æ¨¡æ¿æˆå‘˜å‡½æ•°çš„å®šä¹‰
+     å› æ­¤ï¼Œä¸Žéžæ¨¡æ¿ä»£ç ä¸åŒï¼Œæ¨¡æ¿çš„å¤´æ–‡ä»¶é€šå¸¸åŒ…æ‹¬å£°æ˜ŽåŠå®šä¹‰
 
-  ÀàÄ£°å£º
+  ç±»æ¨¡æ¿ï¼š
     
-    ×÷ÓÃ£ºÉú³ÉÀàµÄÀ¶Í¼
-    Óëº¯ÊýÄ£°åµÄ²»Í¬£º±àÒëÆ÷²»ÄÜÎªÀàÄ£°åÍÆ¶ÏÄ£°å²ÎÊýÀàÐÍ
-    ÎªÁËÊ¹ÓÃÀàÄ£°å£¬±ØÐëÔÚÄ£°åÃûºóµÄ¼âÀ¨ºÅÖÐÌá¹©¶îÍâÐÅÏ¢(´úÌæÄ£°å²ÎÊýµÄÄ£°åÊµ²ÎÁÐ±í)
+    ä½œç”¨ï¼šç”Ÿæˆç±»çš„è“å›¾
+    ä¸Žå‡½æ•°æ¨¡æ¿çš„ä¸åŒï¼šç¼–è¯‘å™¨ä¸èƒ½ä¸ºç±»æ¨¡æ¿æŽ¨æ–­æ¨¡æ¿å‚æ•°ç±»åž‹
+    ä¸ºäº†ä½¿ç”¨ç±»æ¨¡æ¿ï¼Œå¿…é¡»åœ¨æ¨¡æ¿ååŽçš„å°–æ‹¬å·ä¸­æä¾›é¢å¤–ä¿¡æ¯(ä»£æ›¿æ¨¡æ¿å‚æ•°çš„æ¨¡æ¿å®žå‚åˆ—è¡¨)
 
-    ¶¨ÒåÔÚÀàÄ£°åÖ®ÍâµÄ³ÉÔ±º¯Êý±ØÐëÒÔ¹Ø¼ü×Ötemplate¿ªÊ¼ ºó½ÓÀàÄ£°å²ÎÊýÁÐ±í
-    ¾ÙÀý£º
+    å®šä¹‰åœ¨ç±»æ¨¡æ¿ä¹‹å¤–çš„æˆå‘˜å‡½æ•°å¿…é¡»ä»¥å…³é”®å­—templateå¼€å§‹ åŽæŽ¥ç±»æ¨¡æ¿å‚æ•°åˆ—è¡¨
+    ä¸¾ä¾‹ï¼š
     template<typename T>
     Blob<T>::Blob() : data(make_shared<vector<T>>()) {}
 
-    ¹æ¶¨£ºµ±ÎÒÃÇ´¦ÓÚÒ»¸öÀàÄ£°åµÄ×÷ÓÃÓòÖÐÊ±£¬±àÒëÆ÷´¦ÀíÄ£°å×ÔÉíÒýÓÃÊ±
-          ¾ÍºÃÏñÎÒÃÇÒÑ¾­Ìá¹©ÁËÓëÄ£°å²ÎÊýÆ¥ÅäµÄÊµ²ÎÒ»Ñù
+    è§„å®šï¼šå½“æˆ‘ä»¬å¤„äºŽä¸€ä¸ªç±»æ¨¡æ¿çš„ä½œç”¨åŸŸä¸­æ—¶ï¼Œç¼–è¯‘å™¨å¤„ç†æ¨¡æ¿è‡ªèº«å¼•ç”¨æ—¶
+          å°±å¥½åƒæˆ‘ä»¬å·²ç»æä¾›äº†ä¸Žæ¨¡æ¿å‚æ•°åŒ¹é…çš„å®žå‚ä¸€æ ·
 
-          Ò²¾ÍÊÇËµ£¬ÔÚÒ»¸öÀàÄ£°åµÄ×÷ÓÃÓòÄÚ£¬ÎÒÃÇ¿ÉÒÔÖ±½ÓÊ¹ÓÃÄ£°åÃû¶ø²»±ØÖ¸¶¨Ä£°åÊµ²Î
+          ä¹Ÿå°±æ˜¯è¯´ï¼Œåœ¨ä¸€ä¸ªç±»æ¨¡æ¿çš„ä½œç”¨åŸŸå†…ï¼Œæˆ‘ä»¬å¯ä»¥ç›´æŽ¥ä½¿ç”¨æ¨¡æ¿åè€Œä¸å¿…æŒ‡å®šæ¨¡æ¿å®žå‚
 
-          ±ÈÈçÔÚÄ£°åtemplate<typename T>class BlobÖÐ
-          Ð´ Blob& operator++();
-          ¶ø²»ÒªÐ´ Blob<T>& operator++();
+          æ¯”å¦‚åœ¨æ¨¡æ¿template<typename T>class Blobä¸­
+          å†™ Blob& operator++();
+          è€Œä¸è¦å†™ Blob<T>& operator++();
     
-  (4)ÀàÄ£°åºÍÓÑÔª
+  (4)ç±»æ¨¡æ¿å’Œå‹å…ƒ
      
-     Èç¹ûÒ»¸öÀàÄ£°å°üº¬Ò»¸ö·ÇÄ£°åÓÑÔª£¬ÔòÓÑÔª±»ÊÚÈ¨¿ÉÒÔ·ÃÎÊËùÓÐÄ£°åÊµÀý
-     Èç¹ûÓÑÔª×ÔÉíÊÇÄ£°å£¬Àà¿ÉÒÔÊÚÈ¨¸øËùÓÐÓÑÔªÄ£°åÊµÀý£¬Ò²¿ÉÒÔÖ»ÊÚÈ¨ ¸øÌØ¶¨ÊµÀý
+     å¦‚æžœä¸€ä¸ªç±»æ¨¡æ¿åŒ…å«ä¸€ä¸ªéžæ¨¡æ¿å‹å…ƒï¼Œåˆ™å‹å…ƒè¢«æŽˆæƒå¯ä»¥è®¿é—®æ‰€æœ‰æ¨¡æ¿å®žä¾‹
+     å¦‚æžœå‹å…ƒè‡ªèº«æ˜¯æ¨¡æ¿ï¼Œç±»å¯ä»¥æŽˆæƒç»™æ‰€æœ‰å‹å…ƒæ¨¡æ¿å®žä¾‹ï¼Œä¹Ÿå¯ä»¥åªæŽˆæƒ ç»™ç‰¹å®šå®žä¾‹
 
-     ¿ÉÒÔÊ¹ÓÃusing »òÕß typedefÀ´ÎªÄ£°å¶¨ÒåÒ»¸öÀàÐÍ±ðÃû
+     å¯ä»¥ä½¿ç”¨using æˆ–è€… typedefæ¥ä¸ºæ¨¡æ¿å®šä¹‰ä¸€ä¸ªç±»åž‹åˆ«å
 
      template<typename T> using twin = pair<T,T>;
      twin<string>authors;
 
-     ÓÑÔªµÄÉèÖÃ£º
+     å‹å…ƒçš„è®¾ç½®ï¼š
 
-     ¾ÙÀý1£ºÒ»¶ÔÒ»ÓÑÔª¹ØÏµ
+     ä¸¾ä¾‹1ï¼šä¸€å¯¹ä¸€å‹å…ƒå…³ç³»
 
-     template <typename>class BlobPtr;   //¾ùÉùÃ÷ÎªÄ£°å
+     template <typename>class BlobPtr;   //å‡å£°æ˜Žä¸ºæ¨¡æ¿
      template <typename>class Blob;
      template <typename T>
      bool operator==(const Blob<T>&,const Blob<T>&);
@@ -98,16 +98,16 @@
         friend bool operator==<T>(const Blob<T>&,const Blob<T>&);
      }
 
-     ¾ÙÀý2£ºÍ¨ÓÃÓÑÔª¹ØÏµ
+     ä¸¾ä¾‹2ï¼šé€šç”¨å‹å…ƒå…³ç³»
      template<typename T> class Pal;
      class C
      {
-        friend class Pal<C>;  //ÓÃÀàCÊµÀý»¯µÄPalÊÇCµÄÒ»¸öÓÑÔª
+        friend class Pal<C>;  //ç”¨ç±»Cå®žä¾‹åŒ–çš„Palæ˜¯Cçš„ä¸€ä¸ªå‹å…ƒ
         template<typename T> friend class Pal2; 
-        //Pal2µÄËùÓÐÊµÀý¶¼ÊÇCµÄÓÑÔª£¬ÕâÖÖÇé¿öÏÂÎÞÐëÇ°ÖÃÉùÃ÷
+        //Pal2çš„æ‰€æœ‰å®žä¾‹éƒ½æ˜¯Cçš„å‹å…ƒï¼Œè¿™ç§æƒ…å†µä¸‹æ— é¡»å‰ç½®å£°æ˜Ž
      }
     
-  (5)ÀàÄ£°åµÄ¾²Ì¬³ÉÔ±
+  (5)ç±»æ¨¡æ¿çš„é™æ€æˆå‘˜
 
       template<typename T>
       class Foo
@@ -119,31 +119,31 @@
       }
 
       template<typename T>
-      size_t Foo<T>::ctr = 0; // Ä£°åÀàµÄÃ¿¸östaticÊý¾Ý³ÉÔ±±ØÐëÓÐÇÒ½öÓÐÒ»¸ö¶¨Òå
-      //Òò´ËÒª½«staticÊý¾Ý³ÉÔ±¶¨ÒåÎªÄ£°å
+      size_t Foo<T>::ctr = 0; // æ¨¡æ¿ç±»çš„æ¯ä¸ªstaticæ•°æ®æˆå‘˜å¿…é¡»æœ‰ä¸”ä»…æœ‰ä¸€ä¸ªå®šä¹‰
+      //å› æ­¤è¦å°†staticæ•°æ®æˆå‘˜å®šä¹‰ä¸ºæ¨¡æ¿
 
-      Ã¿¸öFooÊµÀý¶¼ÓÐÆä×Ô¼ºµÄstatic³ÉÔ±ÊµÀý
-      ¶ÔÓÚÈÎÒâ¸ø¶¨ÀàÐÍX£¬¶¼ÓÐÒ»¸öFoo<X>X::ctrºÍÒ»¸öFoo<X>::count³ÉÔ±
-      ËùÓÐFoo<X>ÀàÐÍµÄ¶ÔÏó¹²ÏíÏàÍ¬µÄctr¶ÔÏóºÍcountº¯Êý
-      (×¢ÒâÇø·ÖÀàÓë¶ÔÏóµÄ¸ÅÄî)
+      æ¯ä¸ªFooå®žä¾‹éƒ½æœ‰å…¶è‡ªå·±çš„staticæˆå‘˜å®žä¾‹
+      å¯¹äºŽä»»æ„ç»™å®šç±»åž‹Xï¼Œéƒ½æœ‰ä¸€ä¸ªFoo<X>X::ctrå’Œä¸€ä¸ªFoo<X>::countæˆå‘˜
+      æ‰€æœ‰Foo<X>ç±»åž‹çš„å¯¹è±¡å…±äº«ç›¸åŒçš„ctrå¯¹è±¡å’Œcountå‡½æ•°
+      (æ³¨æ„åŒºåˆ†ç±»ä¸Žå¯¹è±¡çš„æ¦‚å¿µ)
   
       Foo<string>fs;
-      //ÊµÀý»¯static³ÉÔ±Foo<string>::ctr ºÍFoo<string>::count
+      //å®žä¾‹åŒ–staticæˆå‘˜Foo<string>::ctr å’ŒFoo<string>::count
 
       Foo<int>f1,f2,f3;
-      //ËùÓÐÈý¸ö¶ÔÏó¹²ÏíÏàÍ¬µÄFoo<int>::ctr ºÍFoo<int>::count³ÉÔ±
+      //æ‰€æœ‰ä¸‰ä¸ªå¯¹è±¡å…±äº«ç›¸åŒçš„Foo<int>::ctr å’ŒFoo<int>::countæˆå‘˜
     
-  (6)Ä£°å²ÎÊý
+  (6)æ¨¡æ¿å‚æ•°
      
-     Ò»¸öÄ£°å²ÎÊýÃûÔÚÒ»¸öÌØ¶¨Ä£°å²ÎÊýÁÐ±íÖÐÖ»ÄÜ³öÏÖÒ»´Î
+     ä¸€ä¸ªæ¨¡æ¿å‚æ•°ååœ¨ä¸€ä¸ªç‰¹å®šæ¨¡æ¿å‚æ•°åˆ—è¡¨ä¸­åªèƒ½å‡ºçŽ°ä¸€æ¬¡
 
-     template<typename V,typename V> //´íÎó
+     template<typename V,typename V> //é”™è¯¯
 
-     Ä£°åÉùÃ÷Óë¶¨ÒåÖÐµÄÃû×Ö²»±ØÏàÍ¬ ÐÎÊ½ÏàÍ¬¼´¿É
+     æ¨¡æ¿å£°æ˜Žä¸Žå®šä¹‰ä¸­çš„åå­—ä¸å¿…ç›¸åŒ å½¢å¼ç›¸åŒå³å¯
 
-     Ä¬ÈÏÇé¿öÏÂ£¬C++ÓïÑÔ¼Ù¶¨Í¨¹ý×÷ÓÃÓòÔËËã·û·ÃÎÊµÄÃû×Ö²»ÊÇÀàÐÍ£¨¶øÊÇÊý¾Ý³ÉÔ±£©
-     Èç¹ûÏ£ÍûÊ¹ÓÃÒ»¸öÄ£°åÀàÐÍ²ÎÊýµÄÀàÐÍ³ÉÔ±£¬¾Í±ØÐëÏÔÊ½µÄ¸æËß±àÒëÆ÷¸ÃÃû×ÖÊÇÒ»¸öÀàÐÍ
-     ·½·¨£ºÊ¹ÓÃtypename¹Ø¼ü×Ö
+     é»˜è®¤æƒ…å†µä¸‹ï¼ŒC++è¯­è¨€å‡å®šé€šè¿‡ä½œç”¨åŸŸè¿ç®—ç¬¦è®¿é—®çš„åå­—ä¸æ˜¯ç±»åž‹ï¼ˆè€Œæ˜¯æ•°æ®æˆå‘˜ï¼‰
+     å¦‚æžœå¸Œæœ›ä½¿ç”¨ä¸€ä¸ªæ¨¡æ¿ç±»åž‹å‚æ•°çš„ç±»åž‹æˆå‘˜ï¼Œå°±å¿…é¡»æ˜¾å¼çš„å‘Šè¯‰ç¼–è¯‘å™¨è¯¥åå­—æ˜¯ä¸€ä¸ªç±»åž‹
+     æ–¹æ³•ï¼šä½¿ç”¨typenameå…³é”®å­—
 
      template<typename T>
      typename T::value_type top(const T& c)
@@ -153,12 +153,12 @@
             else
                 return typename T::value_type();
      }
-     µ±ÎÒÃÇÏ£ÍûÍ¨Öª±àÒëÆ÷Ò»¸öÃû×Ö±íÊ¾ÀàÐÍÊ±£¬±ØÐëÊ¹ÓÃ¹Ø¼ü×Ötypename
+     å½“æˆ‘ä»¬å¸Œæœ›é€šçŸ¥ç¼–è¯‘å™¨ä¸€ä¸ªåå­—è¡¨ç¤ºç±»åž‹æ—¶ï¼Œå¿…é¡»ä½¿ç”¨å…³é”®å­—typename
 
 
-     Ä¬ÈÏÄ£°åÊµ²ÎÎÊÌâ£º£¨·Âº¯ÊýµÄÓ¦ÓÃ£©
+     é»˜è®¤æ¨¡æ¿å®žå‚é—®é¢˜ï¼šï¼ˆä»¿å‡½æ•°çš„åº”ç”¨ï¼‰
 
-     ¾ÙÀý£ºcompareÓÐÒ»¸öÄ¬ÈÏÄ£°åÊµ²Îless<T>ºÍÒ»¸öÄ¬ÈÏº¯ÊýÊµ²ÎF()
+     ä¸¾ä¾‹ï¼šcompareæœ‰ä¸€ä¸ªé»˜è®¤æ¨¡æ¿å®žå‚less<T>å’Œä¸€ä¸ªé»˜è®¤å‡½æ•°å®žå‚F()
      template<typename T,typename F = less<T>>
      int compare(const T& v1,const T& v2,F f = F())
      {
@@ -166,62 +166,62 @@
         if(f(v2,v1))return 1;
         return 0;
      }
-     ÔÚÕâ¶ÎÀý×ÓÖÐ£¬ÎªÄ£°åÌí¼ÓÁËµÚ¶þ¸öÀàÐÍ²ÎÊý£¬Ãû×ÖÎªF£¬±íÊ¾¿Éµ÷ÓÃ¶ÔÏó
-     ²¢¶¨ÒåÁËÒ»¸öÐÂµÄº¯Êý²ÎÊýf£¬°ó¶¨µ½Ò»¸ö¿Éµ÷ÓÃ¶ÔÏóÉÏ
-     (Îª´ËÄ£°å²ÎÊýÌá¹©ÁËÄ¬ÈÏÊµ²Î£¬²¢ÎªÆä¶ÔÓ¦µÄº¯Êý²ÎÊýÒ²Ìá¹©ÁËÄ¬ÈÏÊµ²Î)
+     åœ¨è¿™æ®µä¾‹å­ä¸­ï¼Œä¸ºæ¨¡æ¿æ·»åŠ äº†ç¬¬äºŒä¸ªç±»åž‹å‚æ•°ï¼Œåå­—ä¸ºFï¼Œè¡¨ç¤ºå¯è°ƒç”¨å¯¹è±¡
+     å¹¶å®šä¹‰äº†ä¸€ä¸ªæ–°çš„å‡½æ•°å‚æ•°fï¼Œç»‘å®šåˆ°ä¸€ä¸ªå¯è°ƒç”¨å¯¹è±¡ä¸Š
+     (ä¸ºæ­¤æ¨¡æ¿å‚æ•°æä¾›äº†é»˜è®¤å®žå‚ï¼Œå¹¶ä¸ºå…¶å¯¹åº”çš„å‡½æ•°å‚æ•°ä¹Ÿæä¾›äº†é»˜è®¤å®žå‚)
      
-     ->Ä¬ÈÏÄ£°åÊµ²ÎÖ¸³öcompare½«Ê¹ÓÃ±ê×¼¿âµÄlessº¯Êý¶ÔÏóÀà
-       Ä¬ÈÏº¯ÊýÊµ²ÎÖ¸³öfÊÇÀàÐÍFµÄÒ»¸öÄ¬ÈÏ³õÊ¼»¯µÄ¶ÔÏó
+     ->é»˜è®¤æ¨¡æ¿å®žå‚æŒ‡å‡ºcompareå°†ä½¿ç”¨æ ‡å‡†åº“çš„lesså‡½æ•°å¯¹è±¡ç±»
+       é»˜è®¤å‡½æ•°å®žå‚æŒ‡å‡ºfæ˜¯ç±»åž‹Fçš„ä¸€ä¸ªé»˜è®¤åˆå§‹åŒ–çš„å¯¹è±¡
 
-     µ÷ÓÃ£º
-     bool i = compare(0,42); ·µ»Ø-1 T = int F = less<int>
+     è°ƒç”¨ï¼š
+     bool i = compare(0,42); è¿”å›ž-1 T = int F = less<int>
      
      Sales_data item1(cin),item2(cin);
-     bool j = compare(item1,item2,compareIsbn); //µ÷ÓÃ×Ô¼ºµÄ±È½Ï²Ù×÷
-     compareIsbnµÄÀàÐÍÊÇÒ»¸ö¿Éµ÷ÓÃ¶ÔÏó(º¯Êý¡¢º¯ÊýÖ¸Õë¡¢lambda¡¢ÖØÔØÔËËã·ûÀà) 
-     T = Sales_data     F = compareIsbn (Ö´ÐÐ¿Éµ÷ÓÃ¶ÔÏócompareIsbnµÄÄ¬ÈÏ³õÊ¼»¯)
+     bool j = compare(item1,item2,compareIsbn); //è°ƒç”¨è‡ªå·±çš„æ¯”è¾ƒæ“ä½œ
+     compareIsbnçš„ç±»åž‹æ˜¯ä¸€ä¸ªå¯è°ƒç”¨å¯¹è±¡(å‡½æ•°ã€å‡½æ•°æŒ‡é’ˆã€lambdaã€é‡è½½è¿ç®—ç¬¦ç±») 
+     T = Sales_data     F = compareIsbn (æ‰§è¡Œå¯è°ƒç”¨å¯¹è±¡compareIsbnçš„é»˜è®¤åˆå§‹åŒ–)
 
      .....................
 
      template<class T = int> 
      class Number
      {
-          ......Ò»ÏµÁÐ¶¨Òå¼°²Ù×÷
+          ......ä¸€ç³»åˆ—å®šä¹‰åŠæ“ä½œ
      }
      Number<double>lots_of_precision;
      Number<>average_precision;    
-     ¿Õ<>±íÊ¾ÎÒÃÇÏ£ÍûÊ¹ÓÃÄ¬ÈÏÀàÐÍ
+     ç©º<>è¡¨ç¤ºæˆ‘ä»¬å¸Œæœ›ä½¿ç”¨é»˜è®¤ç±»åž‹
 
 
-  (7)³ÉÔ±Ä£°å
+  (7)æˆå‘˜æ¨¡æ¿
     
-     Ò»¸öÀàÎÞÂÛÊÇÆÕÍ¨Àà»¹ÊÇÀàÄ£°å£¬¿ÉÒÔ°üº¬±¾ÉíÊÇÄ£°åµÄ³ÉÔ±º¯Êý
-     ÕâÖÖ³ÉÔ±±»³ÆÎª³ÉÔ±Ä£°å
+     ä¸€ä¸ªç±»æ— è®ºæ˜¯æ™®é€šç±»è¿˜æ˜¯ç±»æ¨¡æ¿ï¼Œå¯ä»¥åŒ…å«æœ¬èº«æ˜¯æ¨¡æ¿çš„æˆå‘˜å‡½æ•°
+     è¿™ç§æˆå‘˜è¢«ç§°ä¸ºæˆå‘˜æ¨¡æ¿
 
-     ¾ÙÀý1£ºÆÕÍ¨ÀàµÄ³ÉÔ±Ä£°å--¶¨ÒåÒ»¸öÉ¾³ýÆ÷
+     ä¸¾ä¾‹1ï¼šæ™®é€šç±»çš„æˆå‘˜æ¨¡æ¿--å®šä¹‰ä¸€ä¸ªåˆ é™¤å™¨
      class DebugDelete
      {
         public:
             DebugDelete(ostream& s = cerr):os(s){}
 
             template<typename T>
-            void operator()(T* p)const //TµÄÀàÐÍÓÉ±àÒëÆ÷ÍÆ¶Ï(ÖØÔØÀ¨ºÅÔËËã·ûµÄÀàÊÇ¿Éµ÷ÓÃ¶ÔÏó)
+            void operator()(T* p)const //Tçš„ç±»åž‹ç”±ç¼–è¯‘å™¨æŽ¨æ–­(é‡è½½æ‹¬å·è¿ç®—ç¬¦çš„ç±»æ˜¯å¯è°ƒç”¨å¯¹è±¡)
                 { os << "deleting unique_ptr " << endl; delete p;}
         private:
             ostream& os;
      }
 
-     µ÷ÓÃ£ºdouble* p = new double;
-           DebugDelete d;      //×Ô¶¨ÒåµÄÒ»¸öÉ¾³ýÆ÷ ¿ÉÏñdelete±í´ïÊ½Ò»ÑùÊ¹ÓÃµÄ¶ÔÏó
-           d(p);  //µ÷ÓÃDebugDelete::operator()(double*) ÊÍ·Åp
+     è°ƒç”¨ï¼šdouble* p = new double;
+           DebugDelete d;      //è‡ªå®šä¹‰çš„ä¸€ä¸ªåˆ é™¤å™¨ å¯åƒdeleteè¡¨è¾¾å¼ä¸€æ ·ä½¿ç”¨çš„å¯¹è±¡
+           d(p);  //è°ƒç”¨DebugDelete::operator()(double*) é‡Šæ”¾p
            int *ip = new int;
-           //ÔÚÒ»¸öÁÙÊ±DebugDelete¶ÔÏóÉÏµ÷ÓÃoperator()(int*)
+           //åœ¨ä¸€ä¸ªä¸´æ—¶DebugDeleteå¯¹è±¡ä¸Šè°ƒç”¨operator()(int*)
            DebugDelete()(ip);
 
-           »òÕßÓÃ×÷unique_ptrµÄÉ¾³ýÆ÷
-           unique_ptr<int,DebugDelete>p(new int,DebugDelete()); //DebugDelete()ÊÇÌá¹©µÄÕâÖÖÀàµÄÊµÀý ÊÇÒ»¸öÄ¬ÈÏ³õÊ¼»¯µÄ¶ÔÏó
+           æˆ–è€…ç”¨ä½œunique_ptrçš„åˆ é™¤å™¨
+           unique_ptr<int,DebugDelete>p(new int,DebugDelete()); //DebugDelete()æ˜¯æä¾›çš„è¿™ç§ç±»çš„å®žä¾‹ æ˜¯ä¸€ä¸ªé»˜è®¤åˆå§‹åŒ–çš„å¯¹è±¡
 
-    ¾ÙÀý2£º¶ÔÓÚÀàÄ£°åÔÙ¶¨Òå³ÉÔ±Ä£°å
+    ä¸¾ä¾‹2ï¼šå¯¹äºŽç±»æ¨¡æ¿å†å®šä¹‰æˆå‘˜æ¨¡æ¿
            template<typename T>
            class Blob
            {
@@ -229,205 +229,205 @@
                 Blob(It b,It e);
            }
 
-           ÀàÍâ¶¨Òå´Ë³ÉÔ±£º±ØÐëÍ¬Ê±Ìá¹©ÀàºÍº¯ÊýÄ£°åµÄÊµ²Î
+           ç±»å¤–å®šä¹‰æ­¤æˆå‘˜ï¼šå¿…é¡»åŒæ—¶æä¾›ç±»å’Œå‡½æ•°æ¨¡æ¿çš„å®žå‚
            template<typename T>
            template<typename It>
            Blob<T>::Blob(It b,It e):data(make_shared<vector<T>(b,e)){}
            
-           µ÷ÓÃ£º
+           è°ƒç”¨ï¼š
            int ia[] = {1,2,3,4,5};
            Blob<int>a(begin(ia),end(ia));
            T = int It = int* 
 
 
-  (8)ÀûÓÃexternÏÔÊ½¿ØÖÆÊµÀý»¯Ëõ¼õÄ£°å¿ªÏú
+  (8)åˆ©ç”¨externæ˜¾å¼æŽ§åˆ¶å®žä¾‹åŒ–ç¼©å‡æ¨¡æ¿å¼€é”€
 
-     extern template declaration; ´úÂëÒ»¸öÊµÀý»¯ÉùÃ÷(Ò²¾ÍÊÇÉùÃ÷ÔÚÆäËûµØ·½£¬¿ÉÒÔÓÐ¶à¸öexternÉùÃ÷)
-     £¨ÔÚÕâ¸öÎÄ¼þÖÐÐèÒªÓÃµ½ÄÄ¸öÊµÀý»¯¾Í×¢Ã÷externÉùÃ÷(ÀïÃæ¼Ó¾ßÌåµÄÄ£°åÊµ²Î ÈçintµÈ)£©
-     template declaration;        ´ú±íÒ»¸öÊµÀý»¯µÄ¶¨Òå£¨Ò»¸öÄ£°åÖ»ÄÜÓÐÒ»¸ö¶¨Òå£©
+     extern template declaration; ä»£è¡¨ä¸€ä¸ªå®žä¾‹åŒ–å£°æ˜Ž(ä¹Ÿå°±æ˜¯å£°æ˜Žåœ¨å…¶ä»–åœ°æ–¹ï¼Œå¯ä»¥æœ‰å¤šä¸ªexternå£°æ˜Ž)
+     ï¼ˆåœ¨è¿™ä¸ªæ–‡ä»¶ä¸­éœ€è¦ç”¨åˆ°å“ªä¸ªå®žä¾‹åŒ–å°±æ³¨æ˜Žexternå£°æ˜Ž(é‡Œé¢åŠ å…·ä½“çš„æ¨¡æ¿å®žå‚ å¦‚intç­‰)ï¼‰
+     template declaration;        ä»£è¡¨ä¸€ä¸ªå®žä¾‹åŒ–çš„å®šä¹‰ï¼ˆä¸€ä¸ªæ¨¡æ¿åªèƒ½æœ‰ä¸€ä¸ªå®šä¹‰ï¼‰
 
-     //±ÈÈç
-     extern template class Blob<string>; //ÉùÃ÷ Õâ¸ö³ÌÐòÖÐÐèÒªÓÃµ½Blob<string> µ«ÊÇ¶¨ÒåÔÚ±ð´¦
-     template int compare(const int&,const int&); //¶¨Òå ¶ÔÒ»¸öÊµÀý»¯×ö³ö¶¨Òå(Ò»¸öÊµÀý»¯¶ÔÏóÖ»ÄÜÓÐÒ»¸ö¶¨Òå)
+     //æ¯”å¦‚
+     extern template class Blob<string>; //å£°æ˜Ž è¿™ä¸ªç¨‹åºä¸­éœ€è¦ç”¨åˆ°Blob<string> ä½†æ˜¯å®šä¹‰åœ¨åˆ«å¤„
+     template int compare(const int&,const int&); //å®šä¹‰ å¯¹ä¸€ä¸ªå®žä¾‹åŒ–åšå‡ºå®šä¹‰(ä¸€ä¸ªå®žä¾‹åŒ–å¯¹è±¡åªèƒ½æœ‰ä¸€ä¸ªå®šä¹‰)
 
-     ºËÐÄ£º±àÒëÆ÷Óöµ½externÄ£°åÉùÃ÷Ê±£¬²»»áÔÙ±¾ÎÄ¼þÖÐÉú³ÉÊµÀý»¯´úÂë
-     Ö»ÐèÒªÁ´½ÓÆäËûÎÄ¼þµÄÊµÀýÄ£°å¶¨Òå¼´¿É ÕâÑù¿ÉÒÔ´ó´óµÄ¼õÉÙÄÚ´æ¿ªÏú
+     æ ¸å¿ƒï¼šç¼–è¯‘å™¨é‡åˆ°externæ¨¡æ¿å£°æ˜Žæ—¶ï¼Œä¸ä¼šå†æœ¬æ–‡ä»¶ä¸­ç”Ÿæˆå®žä¾‹åŒ–ä»£ç 
+     åªéœ€è¦é“¾æŽ¥å…¶ä»–æ–‡ä»¶çš„å®žä¾‹æ¨¡æ¿å®šä¹‰å³å¯ è¿™æ ·å¯ä»¥å¤§å¤§çš„å‡å°‘å†…å­˜å¼€é”€
 
-     ¾ÙÀý£º
-     ÎÄ¼þ Application.cc
+     ä¸¾ä¾‹ï¼š
+     æ–‡ä»¶ Application.cc
 
      extern template class Blob<string>;
      extern template int compare(const int&,const int&);
-     Blob<string>sa1,sa2; //Blob<string>ÊµÀý»¯³öÏÖÔÚÆäËûÎ»ÖÃ
+     Blob<string>sa1,sa2; //Blob<string>å®žä¾‹åŒ–å‡ºçŽ°åœ¨å…¶ä»–ä½ç½®
 
-     //Blob<int>¼°Æä½ÓÊÜinitializer_listµÄ¹¹Ôìº¯ÊýÔÚ±¾ÎÄ¼þÖÐÊµÀý»¯
-     //Ô­Òò£ºÒòÎªÃ»ÓÐÉùÃ÷extern <int>ÀàÐÍ ËùÒÔÔÚ´ËÊµÀý»¯
+     //Blob<int>åŠå…¶æŽ¥å—initializer_listçš„æž„é€ å‡½æ•°åœ¨æœ¬æ–‡ä»¶ä¸­å®žä¾‹åŒ–
+     //åŽŸå› ï¼šå› ä¸ºæ²¡æœ‰å£°æ˜Žextern <int>ç±»åž‹ æ‰€ä»¥åœ¨æ­¤å®žä¾‹åŒ–
      Blob<int>a1 = {1,2,3,4,5};
-     Blob<int>a2(a1); //¿½±´¹¹ÔìÊµÀý»¯
+     Blob<int>a2(a1); //æ‹·è´æž„é€ å®žä¾‹åŒ–
 
-     int i = compare(a1[0],a2[0]); //Ç°ÃæÓÐexternÉùÃ÷ ËùÒÔÊµÀý»¯³öÏÖÔÚÆäËûÎ»ÖÃ
+     int i = compare(a1[0],a2[0]); //å‰é¢æœ‰externå£°æ˜Ž æ‰€ä»¥å®žä¾‹åŒ–å‡ºçŽ°åœ¨å…¶ä»–ä½ç½®
 
-     ×îÖÕÎÄ¼þApplication.ccÖ»°üº¬Blob<int>µÄÊµÀý¼°Æä½ÓÊÜinitializer_list²ÎÊý¹¹Ôìº¯ÊýºÍ¿½±´¹¹Ôìº¯Êý
-     compare<int>º¯ÊýºÍBlob<string>Àà²»ÔÚ±¾ÎÄ¼þÊµÀý»¯£¬ÕâÐ©Ä£°åµÄ¶¨Òå³öÏÖÔÚ³ÌÐòµÄÆäËûÎÄ¼þÖÐ
+     æœ€ç»ˆæ–‡ä»¶Application.ccåªåŒ…å«Blob<int>çš„å®žä¾‹åŠå…¶æŽ¥å—initializer_listå‚æ•°æž„é€ å‡½æ•°å’Œæ‹·è´æž„é€ å‡½æ•°
+     compare<int>å‡½æ•°å’ŒBlob<string>ç±»ä¸åœ¨æœ¬æ–‡ä»¶å®žä¾‹åŒ–ï¼Œè¿™äº›æ¨¡æ¿çš„å®šä¹‰å‡ºçŽ°åœ¨ç¨‹åºçš„å…¶ä»–æ–‡ä»¶ä¸­
 
 
-     ÎÄ¼þ templateBuild.cc
-     //ÊµÀý»¯ÎÄ¼þÎªÃ¿¸öÔÚÆäËûÎÄ¼þÖÐÉùÃ÷ÎªexternµÄÀàÐÍºÍº¯ÊýÌá¹©Ò»¸ö·ÇexternµÄ¶¨Òå
+     æ–‡ä»¶ templateBuild.cc
+     //å®žä¾‹åŒ–æ–‡ä»¶ä¸ºæ¯ä¸ªåœ¨å…¶ä»–æ–‡ä»¶ä¸­å£°æ˜Žä¸ºexternçš„ç±»åž‹å’Œå‡½æ•°æä¾›ä¸€ä¸ªéžexternçš„å®šä¹‰
      template class Blob<string>;
      template int compare(const int&,const int&);
 
-     ×îÖÕ£¬ÎÄ¼þtemplateBuild.cc½«»á°üº¬compare<int>µÄÊµÀýºÍBlob<string>ÀàµÄ¶¨Òå
-     µ±ÎÒÃÇ±àÒë´ËÓ¦ÓÃ³ÌÐòÊ±£¬±ØÐë½«templateBuild.ccºÍApplication.ccÁ¬½Óµ½Ò»Æð
+     æœ€ç»ˆï¼Œæ–‡ä»¶templateBuild.ccå°†ä¼šåŒ…å«compare<int>çš„å®žä¾‹å’ŒBlob<string>ç±»çš„å®šä¹‰
+     å½“æˆ‘ä»¬ç¼–è¯‘æ­¤åº”ç”¨ç¨‹åºæ—¶ï¼Œå¿…é¡»å°†templateBuild.ccå’ŒApplication.ccè¿žæŽ¥åˆ°ä¸€èµ·
 
-     ²¹³ä£ºÒ»¸öÀàÄ£°åµÄÊµÀý»¯»áÊµÀý»¯¸ÃÄ£°åµÄËùÓÐ³ÉÔ±
-          Ò²¾ÍÊÇËµ£¬¼´Ê¹ÎÒÃÇ²»ÊÊÓÃÄ³¸ö³ÉÔ±£¬ËüÒ²»á±»ÊµÀý»¯
-          (ËùÒÔÓÃÀ´ÏÔÊ½ÊµÀý»¯µÄÀàÄ£°åµÄÀàÐÍ±ØÐëÄÜÓÃÓÚÄ£°åµÄËùÓÐ³ÉÔ±)
+     è¡¥å……ï¼šä¸€ä¸ªç±»æ¨¡æ¿çš„å®žä¾‹åŒ–ä¼šå®žä¾‹åŒ–è¯¥æ¨¡æ¿çš„æ‰€æœ‰æˆå‘˜
+          ä¹Ÿå°±æ˜¯è¯´ï¼Œå³ä½¿æˆ‘ä»¬ä¸é€‚ç”¨æŸä¸ªæˆå‘˜ï¼Œå®ƒä¹Ÿä¼šè¢«å®žä¾‹åŒ–
+          (æ‰€ä»¥ç”¨æ¥æ˜¾å¼å®žä¾‹åŒ–çš„ç±»æ¨¡æ¿çš„ç±»åž‹å¿…é¡»èƒ½ç”¨äºŽæ¨¡æ¿çš„æ‰€æœ‰æˆå‘˜)
 
-2¡¢Ä£°åÊµ²ÎÍÆ¶Ï
+2ã€æ¨¡æ¿å®žå‚æŽ¨æ–­
 
-   ¶¨Òå£º´Óº¯ÊýÊµ²ÎÀ´È·¶¨º¯ÊýÄ£°åÊµ²ÎµÄ¹ý³Ì
+   å®šä¹‰ï¼šä»Žå‡½æ•°å®žå‚æ¥ç¡®å®šå‡½æ•°æ¨¡æ¿å®žå‚çš„è¿‡ç¨‹
 
-   (1)ÀàÐÍ×ª»»ÓëÄ£°åÀàÐÍ²ÎÊý£º
-   ÄÜÔÚµ÷ÓÃÖÐÓ¦ÓÃÓÚº¯ÊýÄ£°åµÄÖ»ÓÐÁ½Ïî£¬ÆäËû×ª»»¾ù²»¿ÉÒÔÓ¦ÓÃÓÚº¯ÊýÄ£°å
-   1¡¢const×ª»» 
-   ½«Ò»¸ö·Çconst¶ÔÏóµÄÒýÓÃ»òÖ¸ÕëÊµ²Î´«µÝ¸øÒ»¸öconstµÄÒýÓÃ»òÖ¸ÕëÐÎ²Î
-   2¡¢Êý×é»òº¯ÊýÖ¸Õë×ª»»(·ÇÒýÓÃÀàÐÍ)
-   Ò»¸öÊý×éÊµ²Î¿ÉÒÔ×ª»»ÎªÒ»¸öÖ¸ÏòÆäÊ×ÔªËØµÄÖ¸Õë£¬Ò»¸öº¯ÊýÊµ²Î¿ÉÒÔ×ª»»ÎªÒ»¸ö¸Ãº¯ÊýÀàÐÍµÄÖ¸Õë
+   (1)ç±»åž‹è½¬æ¢ä¸Žæ¨¡æ¿ç±»åž‹å‚æ•°ï¼š
+   èƒ½åœ¨è°ƒç”¨ä¸­åº”ç”¨äºŽå‡½æ•°æ¨¡æ¿çš„åªæœ‰ä¸¤é¡¹ï¼Œå…¶ä»–è½¬æ¢å‡ä¸å¯ä»¥åº”ç”¨äºŽå‡½æ•°æ¨¡æ¿
+   1ã€constè½¬æ¢ 
+   å°†ä¸€ä¸ªéžconstå¯¹è±¡çš„å¼•ç”¨æˆ–æŒ‡é’ˆå®žå‚ä¼ é€’ç»™ä¸€ä¸ªconstçš„å¼•ç”¨æˆ–æŒ‡é’ˆå½¢å‚
+   2ã€æ•°ç»„æˆ–å‡½æ•°æŒ‡é’ˆè½¬æ¢(éžå¼•ç”¨ç±»åž‹)
+   ä¸€ä¸ªæ•°ç»„å®žå‚å¯ä»¥è½¬æ¢ä¸ºä¸€ä¸ªæŒ‡å‘å…¶é¦–å…ƒç´ çš„æŒ‡é’ˆï¼Œä¸€ä¸ªå‡½æ•°å®žå‚å¯ä»¥è½¬æ¢ä¸ºä¸€ä¸ªè¯¥å‡½æ•°ç±»åž‹çš„æŒ‡é’ˆ
 
-   ¾ÙÀý£º
-   template<typename T>T fobj(T,T); //Öµ´«µÝÐÎÊ½ Êµ²Î±»¿½±´
-   template<typename T>T fref(const T&,const T&);//ÒýÓÃ´«µÝ
+   ä¸¾ä¾‹ï¼š
+   template<typename T>T fobj(T,T); //å€¼ä¼ é€’å½¢å¼ å®žå‚è¢«æ‹·è´
+   template<typename T>T fref(const T&,const T&);//å¼•ç”¨ä¼ é€’
    string s1("hello");
    const string s2("slam");
    
-   fobj(s1,s2);  //µ÷ÓÃfobj(string,string) s2µÄÊµ²Î¶¥²ãconst±»ºöÂÔ
-   fref(s1,s2);  //µ÷ÓÃfref(const string&,const string&) ½«Êµ²Îs1×ª»»ÎªconstÀàÐÍÊÇÔÊÐíµÄ (µ×²ãconst¿ÉÒÔ½ÓÊÜ·Ç³£Á¿¶ÔÏó)
+   fobj(s1,s2);  //è°ƒç”¨fobj(string,string) s2çš„å®žå‚é¡¶å±‚constè¢«å¿½ç•¥
+   fref(s1,s2);  //è°ƒç”¨fref(const string&,const string&) å°†å®žå‚s1è½¬æ¢ä¸ºconstç±»åž‹æ˜¯å…è®¸çš„ (åº•å±‚constå¯ä»¥æŽ¥å—éžå¸¸é‡å¯¹è±¡)
 
    int a[10],b[42];
-   fobj(a,b);    //µ÷ÓÃf(int*,int*)
-   fref(a,b);    //´íÎó Êý×é²»ÄÜ´«ÈëÕâÑùµÄÒýÓÃÀàÐÍ
+   fobj(a,b);    //è°ƒç”¨f(int*,int*)
+   fref(a,b);    //é”™è¯¯ æ•°ç»„ä¸èƒ½ä¼ å…¥è¿™æ ·çš„å¼•ç”¨ç±»åž‹
 
-   ÀýÈç£º
-   f(int& arr[10]);   ´íÎó ²»ÄÜ½«arrÉùÃ÷³ÉÒýÓÃµÄÊý×é ÉÏÊöÐÎ²ÎÊÇconst T&ÊÇÒ»¸öµ¥´¿µÄÒýÓÃ ¼´´íÎó 
-   f(int (&arr)[10]); ÕýÈ· arrÊÇ¾ßÓÐ10¸öÕûÊýµÄÕûÐÍÊý×éµÄÒýÓÃ
+   ä¾‹å¦‚ï¼š
+   f(int& arr[10]);   é”™è¯¯ ä¸èƒ½å°†arrå£°æ˜Žæˆå¼•ç”¨çš„æ•°ç»„ ä¸Šè¿°å½¢å‚æ˜¯const T&æ˜¯ä¸€ä¸ªå•çº¯çš„å¼•ç”¨ å³é”™è¯¯ 
+   f(int (&arr)[10]); æ­£ç¡® arræ˜¯å…·æœ‰10ä¸ªæ•´æ•°çš„æ•´åž‹æ•°ç»„çš„å¼•ç”¨
 
-   ×Ü½á£º
-   ½«Êµ²Î´«µÝ¸ø´øÄ£°åÀàÐÍµÄº¯ÊýÐÎ²ÎÊ±£¬ÄÜ¹»×Ô¶¯Ó¦ÓÃµÄÀàÐÍ×ª»»Ö»ÓÐconst×ª»»
-   ÒÔ¼°Êý¾Ý»òº¯Êýµ½Ö¸ÕëµÄ×ª»»
+   æ€»ç»“ï¼š
+   å°†å®žå‚ä¼ é€’ç»™å¸¦æ¨¡æ¿ç±»åž‹çš„å‡½æ•°å½¢å‚æ—¶ï¼Œèƒ½å¤Ÿè‡ªåŠ¨åº”ç”¨çš„ç±»åž‹è½¬æ¢åªæœ‰constè½¬æ¢
+   ä»¥åŠæ•°æ®æˆ–å‡½æ•°åˆ°æŒ‡é’ˆçš„è½¬æ¢
 
-   (2)º¯ÊýÄ£°åÏÔÊ½Êµ²Î
+   (2)å‡½æ•°æ¨¡æ¿æ˜¾å¼å®žå‚
 
     template<typename T1,typename T2,typename T3>
     T1 sum(T2,T3);
-    Ã»ÓÐÈÎºÎº¯ÊýÊµ²ÎµÄÀàÐÍ¿ÉÓÃÀ´ÍÆ¶ÏT1µÄÀàÐÍ Òò´Ë±ØÐëÌá¹©ÏÔÊ½Ä£°åÊµ²Î
+    æ²¡æœ‰ä»»ä½•å‡½æ•°å®žå‚çš„ç±»åž‹å¯ç”¨æ¥æŽ¨æ–­T1çš„ç±»åž‹ å› æ­¤å¿…é¡»æä¾›æ˜¾å¼æ¨¡æ¿å®žå‚
     int a;
     double b;
     float c;
 
-    ÏÂÃæÁ½ÖÖµ÷ÓÃÐÎÊ½¾ù¿É
+    ä¸‹é¢ä¸¤ç§è°ƒç”¨å½¢å¼å‡å¯
 
     auto val = sum<float>(a,b); //float sum(int,double);
-    //´Ëµ÷ÓÃÏÔÊ½µÄÖ¸¶¨T1£¬T2 T3ÓÉ±àÒëÆ÷ÍÆ¶ÏµÃ³ö
+    //æ­¤è°ƒç”¨æ˜¾å¼çš„æŒ‡å®šT1ï¼ŒT2 T3ç”±ç¼–è¯‘å™¨æŽ¨æ–­å¾—å‡º
     auto val = sum<float,int,double>(a,b);
-    //´Ëµ÷ÓÃÏÔÊ½µÄÖ¸¶¨ÈýÖÖÄ£°å²ÎÊý
+    //æ­¤è°ƒç”¨æ˜¾å¼çš„æŒ‡å®šä¸‰ç§æ¨¡æ¿å‚æ•°
 
-   (3)Î²ÖÃ·µ»ØÀàÐÍÓëÀàÐÍ×ª»»
+   (3)å°¾ç½®è¿”å›žç±»åž‹ä¸Žç±»åž‹è½¬æ¢
     
-      ÎªÊ²Ã´Ê¹ÓÃÎ²ÖÃ·µ»ØÀàÐÍ£¿
-      Ô­Òò£ºÔÚ±àÒëÆ÷Óöµ½º¯ÊýµÄ²ÎÊýÁÐ±íÖ®Ç°£¬ÎÞ·¨È·¶¨·µ»ØµÄÀàÐÍ Òò´Ë±ØÐëÊ¹ÓÃÎ²ÖÃ·µ»ØÀàÐÍ
-            Î²ÖÃ·µ»ØÀàÐÍ³öÏÖÔÚ²ÎÊýÁÐ±íÖ®ºó£¬¿ÉÒÔÊ¹ÓÃº¯ÊýµÄ²ÎÊý
-      ¾ÙÀý£º
+      ä¸ºä»€ä¹ˆä½¿ç”¨å°¾ç½®è¿”å›žç±»åž‹ï¼Ÿ
+      åŽŸå› ï¼šåœ¨ç¼–è¯‘å™¨é‡åˆ°å‡½æ•°çš„å‚æ•°åˆ—è¡¨ä¹‹å‰ï¼Œæ— æ³•ç¡®å®šè¿”å›žçš„ç±»åž‹ å› æ­¤å¿…é¡»ä½¿ç”¨å°¾ç½®è¿”å›žç±»åž‹
+            å°¾ç½®è¿”å›žç±»åž‹å‡ºçŽ°åœ¨å‚æ•°åˆ—è¡¨ä¹‹åŽï¼Œå¯ä»¥ä½¿ç”¨å‡½æ•°çš„å‚æ•°
+      ä¸¾ä¾‹ï¼š
       template<typename It>
-      auto fcn(It beg,It end£©->decltype(*beg)
+      auto fcn(It beg,It endï¼‰->decltype(*beg)
       {
-        //´¦Àí´úÂë
-        return *beg;  //µÈ¼ÛÓÚ·µ»ØÐòÁÐÖÐµÄÒ»¸öÔªËØµÄÒýÓÃ
+        //å¤„ç†ä»£ç 
+        return *beg;  //ç­‰ä»·äºŽè¿”å›žåºåˆ—ä¸­çš„ä¸€ä¸ªå…ƒç´ çš„å¼•ç”¨
       }
-      ÔÚÉÏÃæµÄ³ÌÐòÖÐ£¬ÎÒÃÇÀûÓÃÎ²ÖÃ·µ»ØÀàÐÍÍ¨Öª±àÒëÆ÷fcnµÄÊµ¼Ê·µ»ØÀàÐÍÓë
-      ½âÒýÓÃbeg²ÎÊýµÄ½á¹ûÀàÐÍÏàÍ¬ ¶øÇÒ½âÒýÓÃÔËËã·û·µ»ØµÄÊÇÒ»¸ö×óÖµ
-      Òò´ËÍ¨¹ýdecltypeÍÆ¶ÏµÄÀàÐÍÎªbeg±íÊ¾µÄÔªËØµÄÀàÐÍµÄÒýÓÃ
+      åœ¨ä¸Šé¢çš„ç¨‹åºä¸­ï¼Œæˆ‘ä»¬åˆ©ç”¨å°¾ç½®è¿”å›žç±»åž‹é€šçŸ¥ç¼–è¯‘å™¨fcnçš„å®žé™…è¿”å›žç±»åž‹ä¸Ž
+      è§£å¼•ç”¨begå‚æ•°çš„ç»“æžœç±»åž‹ç›¸åŒ è€Œä¸”è§£å¼•ç”¨è¿ç®—ç¬¦è¿”å›žçš„æ˜¯ä¸€ä¸ªå·¦å€¼
+      å› æ­¤é€šè¿‡decltypeæŽ¨æ–­çš„ç±»åž‹ä¸ºbegè¡¨ç¤ºçš„å…ƒç´ çš„ç±»åž‹çš„å¼•ç”¨
 
-      ÀûÓÃ±ê×¼¿âÄ£°åÀà½øÐÐÀàÐÍ×ª»»
-      Í·ÎÄ¼þ£ºtype_traits
-      ÀûÓÃremove_referenceÀ´»ñµÃÔªËØÀàÐÍ
-      °üÀ¨£ºÒ»¸öÄ£°åÀàÐÍ²ÎÊýºÍÒ»¸öÃûÎªtypeµÄÀàÐÍ³ÉÔ±
-      Óï·¨£ºremove_reference<int&> »ñµÃµÄtype³ÉÔ±ÊÇint
-      ¾ÙÀý£ºremove_reference<decltype(*beg)>::type »ñµÃbegÒýÓÃµÄÔªËØµÄÀàÐÍ
-      decltype(*beg)·µ»ØÔªËØÀàÐÍµÄÒýÓÃÀàÐÍ  remove_reference::typeÍÑÈ¥ÒýÓÃ Ê£ÏÂÔªËØÀàÐÍ±¾Éí
+      åˆ©ç”¨æ ‡å‡†åº“æ¨¡æ¿ç±»è¿›è¡Œç±»åž‹è½¬æ¢
+      å¤´æ–‡ä»¶ï¼štype_traits
+      åˆ©ç”¨remove_referenceæ¥èŽ·å¾—å…ƒç´ ç±»åž‹
+      åŒ…æ‹¬ï¼šä¸€ä¸ªæ¨¡æ¿ç±»åž‹å‚æ•°å’Œä¸€ä¸ªåä¸ºtypeçš„ç±»åž‹æˆå‘˜
+      è¯­æ³•ï¼šremove_reference<int&> èŽ·å¾—çš„typeæˆå‘˜æ˜¯int
+      ä¸¾ä¾‹ï¼šremove_reference<decltype(*beg)>::type èŽ·å¾—begå¼•ç”¨çš„å…ƒç´ çš„ç±»åž‹
+      decltype(*beg)è¿”å›žå…ƒç´ ç±»åž‹çš„å¼•ç”¨ç±»åž‹  remove_reference::typeè„±åŽ»å¼•ç”¨ å‰©ä¸‹å…ƒç´ ç±»åž‹æœ¬èº«
 
-      ¶ÔÉÏÃæµÄ´úÂë½øÐÐ´¦Àí
+      å¯¹ä¸Šé¢çš„ä»£ç è¿›è¡Œå¤„ç†
       template<typename It>
       auto fcn2(It beg,It  end)->typename remove_reference<decltype(*beg)>::type
       {
-            return *beg;  //Êµ¼Ê·µ»ØµÄÊÇÐòÁÐÖÐµÄÒ»¸öÔªËØµÄ¿½±´
+            return *beg;  //å®žé™…è¿”å›žçš„æ˜¯åºåˆ—ä¸­çš„ä¸€ä¸ªå…ƒç´ çš„æ‹·è´
       }
-      ÎªÊ²Ã´¼Ótypename?
-      Ô­Òò£ºtypeÊÇÒ»¸öÀàµÄ³ÉÔ±(ÒÀÀµÓÚÒ»¸öÄ£°å²ÎÊý)
-      Òò´Ë£¬ÓëÇ°ÃæÌáµ½µÄÏàÍ¬£¬±ØÐëÔÚ·µ»ØÀàÐÍµÄÉùÃ÷ÖÐÊ¹ÓÃtypename¹Ø¼ü×ÖÀ´Í¨Öª±àÒëÆ÷ typeÊÇÒ»¸öÀàÐÍ
-      (¼ÓÈëtypename¹Ø¼ü×ÖÏ£ÍûÊ¹ÓÃÒ»¸öÄ£°åÀàÐÍ²ÎÊýµÄÀàÐÍ³ÉÔ±)
+      ä¸ºä»€ä¹ˆåŠ typename?
+      åŽŸå› ï¼štypeæ˜¯ä¸€ä¸ªç±»çš„æˆå‘˜(ä¾èµ–äºŽä¸€ä¸ªæ¨¡æ¿å‚æ•°)
+      å› æ­¤ï¼Œä¸Žå‰é¢æåˆ°çš„ç›¸åŒï¼Œå¿…é¡»åœ¨è¿”å›žç±»åž‹çš„å£°æ˜Žä¸­ä½¿ç”¨typenameå…³é”®å­—æ¥é€šçŸ¥ç¼–è¯‘å™¨ typeæ˜¯ä¸€ä¸ªç±»åž‹
+      (åŠ å…¥typenameå…³é”®å­—å¸Œæœ›ä½¿ç”¨ä¸€ä¸ªæ¨¡æ¿ç±»åž‹å‚æ•°çš„ç±»åž‹æˆå‘˜)
 
-      remove_pointer<T*>::type    ·µ»ØT
-      remove_reference<T&>::type  ·µ»ØT
+      remove_pointer<T*>::type    è¿”å›žT
+      remove_reference<T&>::type  è¿”å›žT
 
-   (4)º¯ÊýÖ¸ÕëºÍÊµ²ÎÍÆ¶Ï
+   (4)å‡½æ•°æŒ‡é’ˆå’Œå®žå‚æŽ¨æ–­
 
      template<typename T>
      int compare(const T&,const T&); 
 
-     int (*pf1)(const int&,const int&) = compare;  //ÕýÈ· º¯ÊýÖ¸Õëpf1Ö¸ÏòcompareµÄint°æ±¾ÊµÀý
-     void func(int(*)(const string&,const string&);//ÕýÈ· ½ÓÊÜÒ»¸öTÎªstringµÄº¯ÊýÖ¸Õë×÷ÎªÐÎ²Î
-     void func(compare);   //´íÎó Ã»ÓÐÖ¸Ã÷Ä£°å²ÎÊýÀàÐÍ ²»ÖªµÀÊ¹ÓÃÄÄÒ»ÖÖÊµÀý
-     void func(compare<int>); // ÕýÈ· ´«µÝcompare(const int&,const int&)
+     int (*pf1)(const int&,const int&) = compare;  //æ­£ç¡® å‡½æ•°æŒ‡é’ˆpf1æŒ‡å‘compareçš„intç‰ˆæœ¬å®žä¾‹
+     void func(int(*)(const string&,const string&);//æ­£ç¡® æŽ¥å—ä¸€ä¸ªTä¸ºstringçš„å‡½æ•°æŒ‡é’ˆä½œä¸ºå½¢å‚
+     void func(compare);   //é”™è¯¯ æ²¡æœ‰æŒ‡æ˜Žæ¨¡æ¿å‚æ•°ç±»åž‹ ä¸çŸ¥é“ä½¿ç”¨å“ªä¸€ç§å®žä¾‹
+     void func(compare<int>); // æ­£ç¡® ä¼ é€’compare(const int&,const int&)
 
-     ¹ØÓÚconstÔÚÊµ²ÎÍÆ¶ÏÖÐµÄÅÐ¶Ï£º
+     å…³äºŽconståœ¨å®žå‚æŽ¨æ–­ä¸­çš„åˆ¤æ–­ï¼š
         
-        1¡¢µ±Ò»¸öº¯Êý²ÎÊýÊÇÄ£°åÀàÐÍ²ÎÊýµÄÒ»¸öÆÕÍ¨×óÖµÒýÓÃÊ±(T&),°ó¶¨¹æÔò¸æËßÎÒÃÇ£¬Ö»ÄÜ´«µÝ¸øËüÒ»¸ö×óÖµ
-        Êµ²Î¿ÉÒÔÊÇconstÀàÐÍ£¬Ò²¿ÉÒÔ²»ÊÇ
-        Èç¹ûÊµ²ÎÊÇconstµÄ£¬ÔòT½«±»ÍÆ¶ÏÎªconstÀàÐÍ
+        1ã€å½“ä¸€ä¸ªå‡½æ•°å‚æ•°æ˜¯æ¨¡æ¿ç±»åž‹å‚æ•°çš„ä¸€ä¸ªæ™®é€šå·¦å€¼å¼•ç”¨æ—¶(T&),ç»‘å®šè§„åˆ™å‘Šè¯‰æˆ‘ä»¬ï¼Œåªèƒ½ä¼ é€’ç»™å®ƒä¸€ä¸ªå·¦å€¼
+        å®žå‚å¯ä»¥æ˜¯constç±»åž‹ï¼Œä¹Ÿå¯ä»¥ä¸æ˜¯
+        å¦‚æžœå®žå‚æ˜¯constçš„ï¼Œåˆ™Tå°†è¢«æŽ¨æ–­ä¸ºconstç±»åž‹
         template<typename T>
         void f1(T&);
-        f1(i); iÊÇÒ»¸öint T=int
-        f1(ci);ciÊ±Ò»¸öconst int  T = const int
-        f1(5); ´íÎó ±ØÐëÊÇÒ»¸ö×óÖµ ¶ø·ÇÓÒÖµ
+        f1(i); iæ˜¯ä¸€ä¸ªint T=int
+        f1(ci);ciæ—¶ä¸€ä¸ªconst int  T = const int
+        f1(5); é”™è¯¯ å¿…é¡»æ˜¯ä¸€ä¸ªå·¦å€¼ è€Œéžå³å€¼
 
-        2¡¢µ±Ò»¸öº¯Êý²ÎÊýÊÇÄ£°åÀàÐÍ²ÎÊýµÄÒ»¸öconstÒýÓÃÊ±(const T&)
-        ¿ÉÒÔ´«µÝ¸øËüÒ»¸öconst»òÕßÒ»¸ö·Çconst¶ÔÏó¡¢Ò»¸öÁÙÊ±¶ÔÏó»òÕßÒ»¸ö×ÖÃæ³£Á¿Öµ
-        µ«ÊÇTµÄÍÆ¶Ï½á¹û²»»áÊÇÒ»¸öconstÀàÐÍ ÒòÎªconstÀàÐÍÒÑ¾­ÊÇº¯Êý²ÎÊýÀàÐÍµÄÒ»²¿·Ö
+        2ã€å½“ä¸€ä¸ªå‡½æ•°å‚æ•°æ˜¯æ¨¡æ¿ç±»åž‹å‚æ•°çš„ä¸€ä¸ªconstå¼•ç”¨æ—¶(const T&)
+        å¯ä»¥ä¼ é€’ç»™å®ƒä¸€ä¸ªconstæˆ–è€…ä¸€ä¸ªéžconstå¯¹è±¡ã€ä¸€ä¸ªä¸´æ—¶å¯¹è±¡æˆ–è€…ä¸€ä¸ªå­—é¢å¸¸é‡å€¼
+        ä½†æ˜¯Tçš„æŽ¨æ–­ç»“æžœä¸ä¼šæ˜¯ä¸€ä¸ªconstç±»åž‹ å› ä¸ºconstç±»åž‹å·²ç»æ˜¯å‡½æ•°å‚æ•°ç±»åž‹çš„ä¸€éƒ¨åˆ†
         template<typename T>
         void f2(const T&);
-        f1(i); iÊÇÒ»¸öint T=int
-        f1(ci);ciÊ±Ò»¸öconst int  T =int
-        f1(5); ¿ÉÒÔÓÃÒ»¸öconst&°ó¶¨µ½ÓÒÖµ ËùÒÔT = int
+        f1(i); iæ˜¯ä¸€ä¸ªint T=int
+        f1(ci);ciæ—¶ä¸€ä¸ªconst int  T =int
+        f1(5); å¯ä»¥ç”¨ä¸€ä¸ªconst&ç»‘å®šåˆ°å³å€¼ æ‰€ä»¥T = int
 
-        3¡¢µ±Ò»¸öº¯Êý²ÎÊýÊÇÓÒÖµÒýÓÃÊ±(T&&) ÍÆ¶Ï³öµÄTÊÇÓÒÖµÊµ²Î
+        3ã€å½“ä¸€ä¸ªå‡½æ•°å‚æ•°æ˜¯å³å€¼å¼•ç”¨æ—¶(T&&) æŽ¨æ–­å‡ºçš„Tæ˜¯å³å€¼å®žå‚
         template<typename T>
         void f3(T&&);
         f3(42);   T = int
 
-        Òý³öµÄÒ»¸öÎÊÌâ£ºÈç¹û¸øÒ»¸öÓÒÖµÒýÓÃÐÎ²Î°ó¶¨ÉÏµÄÊµ²ÎÊÇ×óÖµ»á·¢ÉúÊ²Ã´£¿
-        ´ð°¸£ºÒýÓÃÕÛµþ
-        ·½·¨£ºC++ÔÚÕý³£°ó¶¨¹æÔòÖ®Íâ¶¨ÒåÁËÌØÊâµÄÄ£°å°ó¶¨¹æÔò--ÒýÓÃÕÛµþ
-        f3(i);  Êµ²ÎÊÇÒ»¸ö×óÖµ£¨Ò²¾ÍÊÇ±äÁ¿ÐÎÊ½£© Ä£°å²ÎÊýT = int&
-        f3(ci); Êµ²ÎÊÇÒ»¸ö×óÖµ Ä£°å²ÎÊýTÊÇÒ»¸öconst int&
+        å¼•å‡ºçš„ä¸€ä¸ªé—®é¢˜ï¼šå¦‚æžœç»™ä¸€ä¸ªå³å€¼å¼•ç”¨å½¢å‚ç»‘å®šä¸Šçš„å®žå‚æ˜¯å·¦å€¼ä¼šå‘ç”Ÿä»€ä¹ˆï¼Ÿ
+        ç­”æ¡ˆï¼šå¼•ç”¨æŠ˜å 
+        æ–¹æ³•ï¼šC++åœ¨æ­£å¸¸ç»‘å®šè§„åˆ™ä¹‹å¤–å®šä¹‰äº†ç‰¹æ®Šçš„æ¨¡æ¿ç»‘å®šè§„åˆ™--å¼•ç”¨æŠ˜å 
+        f3(i);  å®žå‚æ˜¯ä¸€ä¸ªå·¦å€¼ï¼ˆä¹Ÿå°±æ˜¯å˜é‡å½¢å¼ï¼‰ æ¨¡æ¿å‚æ•°T = int&
+        f3(ci); å®žå‚æ˜¯ä¸€ä¸ªå·¦å€¼ æ¨¡æ¿å‚æ•°Tæ˜¯ä¸€ä¸ªconst int&
 
-        ÒýÓÃÕÛµþ¹æÔò(±ØÐëÊÇÄ£°åÀàÐÍ)£º
-        Èç¹ûÒ»¸öº¯Êý²ÎÊýÊÇÒ»¸ö Ö¸ÏòÄ£°åÀàÐÍ²ÎÊýµÄÓÒÖµÒýÓÃT&&£¬ÔòËü¿ÉÒÔ±»°ó¶¨µ½Ò»¸ö×óÖµ
-        ÇÒÈç¹ûÊµ²ÎÊÇÒ»¸ö×óÖµ ÔòÍÆ¶Ï³öµÄÄ£°åÊµ²ÎÀàÐÍ½«ÊÇÒ»¸ö×óÖµÒýÓÃ
-        ÇÒº¯Êý²ÎÊý½«±»ÊµÀý»¯ÎªÒ»¸öÆÕÍ¨×óÖµÒýÓÃ²ÎÊýT&
-        (Ò²¾ÍÊÇËµ£¬ÎÒÃÇ¿ÉÒÔ½«ÈÎÒâÀàÐÍµÄÊµ²Î´«µÝ¸øT&&ÀàÐÍµÄº¯Êý²ÎÊý)
+        å¼•ç”¨æŠ˜å è§„åˆ™(å¿…é¡»æ˜¯æ¨¡æ¿ç±»åž‹)ï¼š
+        å¦‚æžœä¸€ä¸ªå‡½æ•°å‚æ•°æ˜¯ä¸€ä¸ª æŒ‡å‘æ¨¡æ¿ç±»åž‹å‚æ•°çš„å³å€¼å¼•ç”¨T&&ï¼Œåˆ™å®ƒå¯ä»¥è¢«ç»‘å®šåˆ°ä¸€ä¸ªå·¦å€¼
+        ä¸”å¦‚æžœå®žå‚æ˜¯ä¸€ä¸ªå·¦å€¼ åˆ™æŽ¨æ–­å‡ºçš„æ¨¡æ¿å®žå‚ç±»åž‹å°†æ˜¯ä¸€ä¸ªå·¦å€¼å¼•ç”¨
+        ä¸”å‡½æ•°å‚æ•°å°†è¢«å®žä¾‹åŒ–ä¸ºä¸€ä¸ªæ™®é€šå·¦å€¼å¼•ç”¨å‚æ•°T&
+        (ä¹Ÿå°±æ˜¯è¯´ï¼Œæˆ‘ä»¬å¯ä»¥å°†ä»»æ„ç±»åž‹çš„å®žå‚ä¼ é€’ç»™T&&ç±»åž‹çš„å‡½æ•°å‚æ•°)
 
-        Ê¹ÓÃÓÒÖµÒýÓÃµÄº¯ÊýÄ£°åÍ¨³£Ê¹ÓÃÖ®Ç°¹ØÓÚ×óÖµÓëÓÒÖµÒýÓÃµÄ·½Ê½½øÐÐÖØÔØ
-        template<typename T>void f(T&&);     Ä£°å¿ÉÒÔ°ó¶¨ÈÎÒâÀàÐÍ ¾«È·Æ¥Åä°ó¶¨µ½·Çconst×óÖµ
-        template<typename T>void f(const T&);Ä£°å¿ÉÒÔ°ó¶¨ÈÎÒâÀàÐÍ ¾«È·Æ¥Åä°ó¶¨µ½×óÖµºÍconstÓÒÖµ
+        ä½¿ç”¨å³å€¼å¼•ç”¨çš„å‡½æ•°æ¨¡æ¿é€šå¸¸ä½¿ç”¨ä¹‹å‰å…³äºŽå·¦å€¼ä¸Žå³å€¼å¼•ç”¨çš„æ–¹å¼è¿›è¡Œé‡è½½
+        template<typename T>void f(T&&);     æ¨¡æ¿å¯ä»¥ç»‘å®šä»»æ„ç±»åž‹ ç²¾ç¡®åŒ¹é…ç»‘å®šåˆ°éžconstå·¦å€¼
+        template<typename T>void f(const T&);æ¨¡æ¿å¯ä»¥ç»‘å®šä»»æ„ç±»åž‹ ç²¾ç¡®åŒ¹é…ç»‘å®šåˆ°å·¦å€¼å’Œconstå³å€¼
 
-   (5)std::moveµÄÀí½â ÖØµã
+   (5)std::moveçš„ç†è§£ é‡ç‚¹
       
-      Ö®Ç°µÄÓ¦ÓÃ£º
-      int&& r1 = 42;            ÕýÈ·
-      int&& r2 = r1;            ´íÎó ²»ÄÜ½«Ò»¸öÓÒÖµÒýÓÃ°ó¶¨µ½ÁíÒ»¸öÓÒÖµÒýÓÃ±äÁ¿ÉÏ ÒòÎª±äÁ¿ÊÇ×óÖµ
-      int&& r2 = std::move(r1); ÕýÈ· ÏÔÊ¾µÄ½«Ò»¸ö´«ÈëµÄ×óÖµ×ª»»ÎªÓÒÖµÒýÓÃÀàÐÍ(»ñµÃ°ó¶¨µ½Ò»¸ö×óÖµÉÏµÄÓÒÖµÒýÓÃ)
+      ä¹‹å‰çš„åº”ç”¨ï¼š
+      int&& r1 = 42;            æ­£ç¡®
+      int&& r2 = r1;            é”™è¯¯ ä¸èƒ½å°†ä¸€ä¸ªå³å€¼å¼•ç”¨ç»‘å®šåˆ°å¦ä¸€ä¸ªå³å€¼å¼•ç”¨å˜é‡ä¸Š å› ä¸ºå˜é‡æ˜¯å·¦å€¼
+      int&& r2 = std::move(r1); æ­£ç¡® æ˜¾ç¤ºçš„å°†ä¸€ä¸ªä¼ å…¥çš„å·¦å€¼è½¬æ¢ä¸ºå³å€¼å¼•ç”¨ç±»åž‹(èŽ·å¾—ç»‘å®šåˆ°ä¸€ä¸ªå·¦å€¼ä¸Šçš„å³å€¼å¼•ç”¨)
 
-      std::moveÔ´´úÂë
+      std::moveæºä»£ç 
       template<typename T>
       typename remove_reference<T>::type&& move(T&& t)
       {
@@ -437,71 +437,71 @@
       s2 = std::move(string("slam"));
       s2 = std::move(s1);
 
-      ÔÚµÚÒ»¸öµ÷ÓÃs2 = std::move(string("slam"))ÖÐ ´«µÝ¸ømoveµÄÊµ²ÎÊÇstringµÄ¹¹Ôìº¯ÊýµÄÓÒÖµ½á¹û
-      Òò´ËÍÆ¶Ï³öµÄTÊÇstring
-      remove_referenceÓÃstring½øÐÐÊµÀý»¯
-      remove_reference<string>type³ÉÔ±ÊÇstring
-      moveµÄ·µ»ØÀàÐÍÊÇstring&&
-      moveµÄº¯Êý²ÎÊýtµÄÀàÐÍÊÇstring&&
+      åœ¨ç¬¬ä¸€ä¸ªè°ƒç”¨s2 = std::move(string("slam"))ä¸­ ä¼ é€’ç»™moveçš„å®žå‚æ˜¯stringçš„æž„é€ å‡½æ•°çš„å³å€¼ç»“æžœ
+      å› æ­¤æŽ¨æ–­å‡ºçš„Tæ˜¯string
+      remove_referenceç”¨stringè¿›è¡Œå®žä¾‹åŒ–
+      remove_reference<string>typeæˆå‘˜æ˜¯string
+      moveçš„è¿”å›žç±»åž‹æ˜¯string&&
+      moveçš„å‡½æ•°å‚æ•°tçš„ç±»åž‹æ˜¯string&&
 
-      µ÷ÓÃÐÎ³ÉµÄÊµÀý»¯£ºstring&& move(string&& t);
-      Õâ¸öµ÷ÓÃµÄ½á¹û¾ÍÊÇËüËù½ÓÊÜµÄÓÒÖµÒýÓÃ
+      è°ƒç”¨å½¢æˆçš„å®žä¾‹åŒ–ï¼šstring&& move(string&& t);
+      è¿™ä¸ªè°ƒç”¨çš„ç»“æžœå°±æ˜¯å®ƒæ‰€æŽ¥å—çš„å³å€¼å¼•ç”¨
 
-      ÔÚµÚ¶þ¸öµ÷ÓÃs2 = std::move(s1)ÖÐ ´«µÝ¸ømoveµÄÊµ²Îs1ÊÇÒ»¸ö×óÖµ(±äÁ¿)
-      Òò´ËÍÆ¶Ï³öµÄTµÄÀàÐÍÊÇstring&(ÒýÓÃÕÛµþ»úÖÆ)
-      remove_referenceÓÃstring&½øÐÐÊµÀý»¯
-      remove_reference<string&>type³ÉÔ±ÊÇstring
-      moveµÄ·µ»ØÀàÐÍÊÇstring&&
-      moveµÄº¯Êý²ÎÊýtµÄÊµÀý»¯Îªstring& &&,±»ÕÛµþÎªstring&
+      åœ¨ç¬¬äºŒä¸ªè°ƒç”¨s2 = std::move(s1)ä¸­ ä¼ é€’ç»™moveçš„å®žå‚s1æ˜¯ä¸€ä¸ªå·¦å€¼(å˜é‡)
+      å› æ­¤æŽ¨æ–­å‡ºçš„Tçš„ç±»åž‹æ˜¯string&(å¼•ç”¨æŠ˜å æœºåˆ¶)
+      remove_referenceç”¨string&è¿›è¡Œå®žä¾‹åŒ–
+      remove_reference<string&>typeæˆå‘˜æ˜¯string
+      moveçš„è¿”å›žç±»åž‹æ˜¯string&&
+      moveçš„å‡½æ•°å‚æ•°tçš„å®žä¾‹åŒ–ä¸ºstring& &&,è¢«æŠ˜å ä¸ºstring&
 
-      µ÷ÓÃÐÎ³ÉµÄÊµÀý»¯£ºstring&& move(string& t);
-      Ò²¾ÍÊÇ½«Ò»¸öÓÒÖµÒýÓÃ°ó¶¨µ½ÁËÒ»¸ö×óÖµ
-      Õâ¸öÊµÀý»¯µÄº¯ÊýÌå·µ»Østatic_cast<string&&>(t)
-      tµÄÀàÐÍÊÇÒ»¸östring&,cast½«Æä×ª»»Îªstring&&
-      (C++¿ÉÒÔÓÃstatic_castÏÔÊ½µÄ½«Ò»¸ö×óÖµ×ª»»ÎªÒ»¸öÓÒÖµÒýÓÃ)
+      è°ƒç”¨å½¢æˆçš„å®žä¾‹åŒ–ï¼šstring&& move(string& t);
+      ä¹Ÿå°±æ˜¯å°†ä¸€ä¸ªå³å€¼å¼•ç”¨ç»‘å®šåˆ°äº†ä¸€ä¸ªå·¦å€¼
+      è¿™ä¸ªå®žä¾‹åŒ–çš„å‡½æ•°ä½“è¿”å›žstatic_cast<string&&>(t)
+      tçš„ç±»åž‹æ˜¯ä¸€ä¸ªstring&,castå°†å…¶è½¬æ¢ä¸ºstring&&
+      (C++å¯ä»¥ç”¨static_castæ˜¾å¼çš„å°†ä¸€ä¸ªå·¦å€¼è½¬æ¢ä¸ºä¸€ä¸ªå³å€¼å¼•ç”¨)
 
-   (6)Ä£°åÖÐµÄ×ª·¢»úÖÆ ÖØµã£¡
+   (6)æ¨¡æ¿ä¸­çš„è½¬å‘æœºåˆ¶ é‡ç‚¹ï¼
 
-      ×÷ÓÃ£ºÒ»Ð©º¯ÊýÐèÒª½«ÆäÒ»¸ö»ò¶à¸öÊµ²ÎÁ¬Í¬ÀàÐÍ²»±äµØ×ª·¢¸øÆäËûº¯Êý
-            ÔÚ×ª·¢µÄÇé¿öÏÂ£¬ÐèÒª±£³Ö±»×ª·¢Êµ²ÎµÄËùÓÐÐÔÖÊ(ÊÇ·ñÊÇconst/ÊÇ·ñÊÇ×óÖµÓÒÖµ)
+      ä½œç”¨ï¼šä¸€äº›å‡½æ•°éœ€è¦å°†å…¶ä¸€ä¸ªæˆ–å¤šä¸ªå®žå‚è¿žåŒç±»åž‹ä¸å˜åœ°è½¬å‘ç»™å…¶ä»–å‡½æ•°
+            åœ¨è½¬å‘çš„æƒ…å†µä¸‹ï¼Œéœ€è¦ä¿æŒè¢«è½¬å‘å®žå‚çš„æ‰€æœ‰æ€§è´¨(æ˜¯å¦æ˜¯const/æ˜¯å¦æ˜¯å·¦å€¼å³å€¼)
 
-      Ä£°åÖÐÄÜ±£³ÖÀàÐÍÐÅÏ¢µÄº¯Êý²ÎÊý£ºÖ¸ÏòÄ£°åÀàÐÍ²ÎÊýµÄÓÒÖµÒýÓÃT&&
+      æ¨¡æ¿ä¸­èƒ½ä¿æŒç±»åž‹ä¿¡æ¯çš„å‡½æ•°å‚æ•°ï¼šæŒ‡å‘æ¨¡æ¿ç±»åž‹å‚æ•°çš„å³å€¼å¼•ç”¨T&&
       template<typename F,typename T1,typename T2>
       void filp2(F f,T1&& t1,T2&& t2)
       {
             f(t2,t1);  //f(T v1,T& v2)
       }
-      µ÷ÓÃfilp2(f,j,42) ´«µÝ¸ø²ÎÊýt1Ò»¸ö×óÖµj ÀûÓÃÒýÓÃÕÛµþ»úÖÆÍÆ³öT = int& && = int&
-      t1±»°ó¶¨µ½jÉÏ£¬µ±filp2µ÷ÓÃfÊ± fÖÐµÄÒýÓÃ²ÎÊýv2±»°ó¶¨µ½t1 Ò²¾ÍÊÇj µ±v2¸Ä±äÊ±Í¬Ê±»á¸Ä±äj
+      è°ƒç”¨filp2(f,j,42) ä¼ é€’ç»™å‚æ•°t1ä¸€ä¸ªå·¦å€¼j åˆ©ç”¨å¼•ç”¨æŠ˜å æœºåˆ¶æŽ¨å‡ºT = int& && = int&
+      t1è¢«ç»‘å®šåˆ°jä¸Šï¼Œå½“filp2è°ƒç”¨fæ—¶ fä¸­çš„å¼•ç”¨å‚æ•°v2è¢«ç»‘å®šåˆ°t1 ä¹Ÿå°±æ˜¯j å½“v2æ”¹å˜æ—¶åŒæ—¶ä¼šæ”¹å˜j
 
-      È±µã£ºµ÷ÓÃÐÎÈçÕâÑùµÄº¯Êýfile2(g,i,42); //g(T1&& v2,T2& v1)
-            ´«µÝ¸øgµÄÊÇfilp2ÖÐÃûÎªt2µÄ²ÎÊý  (T2&& t2 = 42)
-            º¯Êý²ÎÊýÓëÆäËûÈÎºÎ±äÁ¿Ò»Ñù¶¼ÊÇ×óÖµ±í´ïÊ½
-            µ«ÊÇC++¹æ¶¨²»ÄÜÒþÊ½µÄ½«Ò»¸ö×óÖµ°ó¶¨µ½Ò»¸öÓÒÖµÒýÓÃÉÏ Òò´ËÕâ¸ö³ÌÐòÔÚÓÒÖµÒýÓÃÊ±»á·¢ÉúÎÊÌâ
-            (int&& r1 = 42; int&& r2 = r1; Õâ¸öÊÇ´íÎóµÄ£©
+      ç¼ºç‚¹ï¼šè°ƒç”¨å½¢å¦‚è¿™æ ·çš„å‡½æ•°file2(g,i,42); //g(T1&& v2,T2& v1)
+            ä¼ é€’ç»™gçš„æ˜¯filp2ä¸­åä¸ºt2çš„å‚æ•°  (T2&& t2 = 42)
+            å‡½æ•°å‚æ•°ä¸Žå…¶ä»–ä»»ä½•å˜é‡ä¸€æ ·éƒ½æ˜¯å·¦å€¼è¡¨è¾¾å¼
+            ä½†æ˜¯C++è§„å®šä¸èƒ½éšå¼çš„å°†ä¸€ä¸ªå·¦å€¼ç»‘å®šåˆ°ä¸€ä¸ªå³å€¼å¼•ç”¨ä¸Š å› æ­¤è¿™ä¸ªç¨‹åºåœ¨å³å€¼å¼•ç”¨æ—¶ä¼šå‘ç”Ÿé—®é¢˜
+            (int&& r1 = 42; int&& r2 = r1; è¿™ä¸ªæ˜¯é”™è¯¯çš„ï¼‰
       
-      ¸Ä½ø·½·¨£ºÊ¹ÓÃstd::forward±ê×¼¿âº¯Êý£¨Í·ÎÄ¼þÎªutility£©
-      ¸Ã·½·¨Í¨¹ýÏÔÊ½µÄÄ£°åÀ´µ÷ÓÃ ·µ»ØÏÔÊ½Êµ²ÎÀàÐÍµÄÓÒÖµÒýÓÃ forward<T>·µ»ØT&&
+      æ”¹è¿›æ–¹æ³•ï¼šä½¿ç”¨std::forwardæ ‡å‡†åº“å‡½æ•°ï¼ˆå¤´æ–‡ä»¶ä¸ºutilityï¼‰
+      è¯¥æ–¹æ³•é€šè¿‡æ˜¾å¼çš„æ¨¡æ¿æ¥è°ƒç”¨ è¿”å›žæ˜¾å¼å®žå‚ç±»åž‹çš„å³å€¼å¼•ç”¨ forward<T>è¿”å›žT&&
 
       template<typename F,typename T1,typename T2>
       void filp(F f,T1&& t1.T2&& t2)
       {
         f(std::forward<T2>(t2),std::forward<T1>(t1);
       }
-      Èç¹û´«µÝ¸øT1Î»ÖÃµÄÊµ²ÎÊÇÒ»¸öÓÒÖµ ÄÇÃ´T1µÄÀàÐÍÎªÒ»¸öÆÕÍ¨·ÇÒýÓÃÀàÐÍ
-      forwarf<T1>»á·µ»ØT1&&
-      Èç¹û´«µÝ¸øT1Î»ÖÃµÄÊµ²ÎÊÇÒ»¸ö×óÖµ ÄÇÃ´Í¨¹ýÒýÓÃÕÛµþ T1±¾ÉíÊÇÒ»¸ö×óÖµÒýÓÃÀàÐÍ
-      ÔÚÕâ¸ö»ù´¡ÉÏ forward<T1>µÄ·µ»ØÀàÐÍÊÇÒ»¸öÖ¸Ïò×óÖµÒýÓÃÀàÐÍµÄÓÒÖµÒýÓÃ& &&
-      »áÔÙ´Î´¥·¢ÒýÓÃÕÛµþ»úÖÆ ·µ»ØÒ»¸ö×óÖµÒýÓÃÀàÐÍ
+      å¦‚æžœä¼ é€’ç»™T1ä½ç½®çš„å®žå‚æ˜¯ä¸€ä¸ªå³å€¼ é‚£ä¹ˆT1çš„ç±»åž‹ä¸ºä¸€ä¸ªæ™®é€šéžå¼•ç”¨ç±»åž‹
+      forwarf<T1>ä¼šè¿”å›žT1&&
+      å¦‚æžœä¼ é€’ç»™T1ä½ç½®çš„å®žå‚æ˜¯ä¸€ä¸ªå·¦å€¼ é‚£ä¹ˆé€šè¿‡å¼•ç”¨æŠ˜å  T1æœ¬èº«æ˜¯ä¸€ä¸ªå·¦å€¼å¼•ç”¨ç±»åž‹
+      åœ¨è¿™ä¸ªåŸºç¡€ä¸Š forward<T1>çš„è¿”å›žç±»åž‹æ˜¯ä¸€ä¸ªæŒ‡å‘å·¦å€¼å¼•ç”¨ç±»åž‹çš„å³å€¼å¼•ç”¨& &&
+      ä¼šå†æ¬¡è§¦å‘å¼•ç”¨æŠ˜å æœºåˆ¶ è¿”å›žä¸€ä¸ªå·¦å€¼å¼•ç”¨ç±»åž‹
 
-      Èç¹ûµ÷ÓÃfilp(g,i,42) ÄÇÃ´i»áÒÔint&µÄÀàÐÍ´«µÝ¸øg 42ÒÔint&&µÄÀàÐÍ´«µÝ¸øg
+      å¦‚æžœè°ƒç”¨filp(g,i,42) é‚£ä¹ˆiä¼šä»¥int&çš„ç±»åž‹ä¼ é€’ç»™g 42ä»¥int&&çš„ç±»åž‹ä¼ é€’ç»™g
 
-   (7)Ä£°åÖØÔØ
+   (7)æ¨¡æ¿é‡è½½
       
-      ¹æÔò£º
-      1¡¢Èç¹ûÍ¬ÑùºÃµÄº¯ÊýÖÐÖ»ÓÐÒ»¸öÊÇ·ÇÄ£°å²ÎÊý£¬ÔòÑ¡Ôñ´Ëº¯Êý
-      2¡¢Èç¹ûÍ¬ÑùºÃµÄº¯ÊýÖÐÃ»ÓÐ·ÇÄ£°åº¯Êý£¬¶øÇÒÓÐ¶à¸öº¯ÊýÄ£°å£¬ÇÒÆäÖÐÒ»¸öÄ£°å±ÈÆäËûÄ£°å¸üÌØÀý»¯£¬ÔòÑ¡Ôñ´ËÄ£°å
-      ÒÔÉÏÁ½Ìõ¾ù²»·ûºÏ£¬µ÷ÓÃ»á²úÉúÆçÒå
+      è§„åˆ™ï¼š
+      1ã€å¦‚æžœåŒæ ·å¥½çš„å‡½æ•°ä¸­åªæœ‰ä¸€ä¸ªæ˜¯éžæ¨¡æ¿å‚æ•°ï¼Œåˆ™é€‰æ‹©æ­¤å‡½æ•°
+      2ã€å¦‚æžœåŒæ ·å¥½çš„å‡½æ•°ä¸­æ²¡æœ‰éžæ¨¡æ¿å‡½æ•°ï¼Œè€Œä¸”æœ‰å¤šä¸ªå‡½æ•°æ¨¡æ¿ï¼Œä¸”å…¶ä¸­ä¸€ä¸ªæ¨¡æ¿æ¯”å…¶ä»–æ¨¡æ¿æ›´ç‰¹ä¾‹åŒ–ï¼Œåˆ™é€‰æ‹©æ­¤æ¨¡æ¿
+      ä»¥ä¸Šä¸¤æ¡å‡ä¸ç¬¦åˆï¼Œè°ƒç”¨ä¼šäº§ç”Ÿæ­§ä¹‰
 
       template<typename T>string debug_rep(const T& t);
       template<typename T>string debug_rep(T* p);
@@ -509,78 +509,78 @@
       const string* sp = &s;
       cout << debug_bug(sp) << endl;
 
-      ²úÉúÁ½¸öÄ£°å ¾ù¿ÉÐÐ µ«»áµ÷ÓÃµÚ¶þ¸ö
+      äº§ç”Ÿä¸¤ä¸ªæ¨¡æ¿ å‡å¯è¡Œ ä½†ä¼šè°ƒç”¨ç¬¬äºŒä¸ª
       debug_rep(const string*&) T = string*
       debug_rep(const string*)  T = const string
 
-      ÎªÊ²Ã´»áÓÐÕâÑùµÄ¹æÔò£¬²¢ÇÒ»áµ÷ÓÃµÚ¶þ¸ö
+      ä¸ºä»€ä¹ˆä¼šæœ‰è¿™æ ·çš„è§„åˆ™ï¼Œå¹¶ä¸”ä¼šè°ƒç”¨ç¬¬äºŒä¸ª
 
-      Èç¹ûÃ»ÓÐÕâ¸ö¹æÔòµÄ»°£¬½«ÎÞ·¨¶ÔÒ»¸öconstµÄÖ¸Õëµ÷ÓÃ¸ÃÖ¸Õë°æ±¾µÄdebug_rep
-      ÒòÎªÄ£°ådebug_rep(const T&)±¾ÖÊÉÏÀ´Ëµ¿ÉÒÔÊÊÓÃÓÚÈÎºÎÀàÐÍ(°üÀ¨Ö¸Õë)
-      Õâ¸öÄ£°å±Èdebug_rep(T*)¸üÍ¨ÓÃ£¬ºóÕßÖ»ÊÊÓÃÓÚÖ¸ÕëÀàÐÍ
-      Òò´ËÑ¡Ôñ¸üÌØÀý»¯µÄÖ¸Õë°æ±¾
+      å¦‚æžœæ²¡æœ‰è¿™ä¸ªè§„åˆ™çš„è¯ï¼Œå°†æ— æ³•å¯¹ä¸€ä¸ªconstçš„æŒ‡é’ˆè°ƒç”¨è¯¥æŒ‡é’ˆç‰ˆæœ¬çš„debug_rep
+      å› ä¸ºæ¨¡æ¿debug_rep(const T&)æœ¬è´¨ä¸Šæ¥è¯´å¯ä»¥é€‚ç”¨äºŽä»»ä½•ç±»åž‹(åŒ…æ‹¬æŒ‡é’ˆ)
+      è¿™ä¸ªæ¨¡æ¿æ¯”debug_rep(T*)æ›´é€šç”¨ï¼ŒåŽè€…åªé€‚ç”¨äºŽæŒ‡é’ˆç±»åž‹
+      å› æ­¤é€‰æ‹©æ›´ç‰¹ä¾‹åŒ–çš„æŒ‡é’ˆç‰ˆæœ¬
 
-      ÔÚ¶¨ÒåÈÎºÎº¯ÊýÖ®Ç°£¬Èç¹ûÐèÒªÓÃµ½ÌØ¶¨µÄº¯ÊýÖØÔØ°æ±¾£¬¼ÇµÃÉùÃ÷ËùÓÐÐèÒªÓÃµ½µÄÖØÔØº¯Êý°æ±¾
-      ÕâÑù¾Í²»ÓÃµ£ÐÄÏ£Íûµ÷ÓÃµÄº¯ÊýµÄÊµÀý»¯²»ÊÇÄãËùÐèÒªµÄ°æ±¾
+      åœ¨å®šä¹‰ä»»ä½•å‡½æ•°ä¹‹å‰ï¼Œå¦‚æžœéœ€è¦ç”¨åˆ°ç‰¹å®šçš„å‡½æ•°é‡è½½ç‰ˆæœ¬ï¼Œè®°å¾—å£°æ˜Žæ‰€æœ‰éœ€è¦ç”¨åˆ°çš„é‡è½½å‡½æ•°ç‰ˆæœ¬
+      è¿™æ ·å°±ä¸ç”¨æ‹…å¿ƒå¸Œæœ›è°ƒç”¨çš„å‡½æ•°çš„å®žä¾‹åŒ–ä¸æ˜¯ä½ æ‰€éœ€è¦çš„ç‰ˆæœ¬
 
-3¡¢¿É±ä²ÎÊýÄ£°å
+3ã€å¯å˜å‚æ•°æ¨¡æ¿
     
-    ¶¨Òå£º½ÓÊÜ¿É±äÊýÄ¿²ÎÊýµÄÄ£°åº¯Êý»òÄ£°åÀà 
-          ¿É±äÊýÄ¿µÄ²ÎÊý±»³ÆÎª²ÎÊý°ü(°üÀ¨Ä£°å²ÎÊý°üÓëº¯Êý²ÎÊý°ü)
-          ·ûºÅ±íÊ¾:...Ê¡ÂÔºÅ  typename.../class...
+    å®šä¹‰ï¼šæŽ¥å—å¯å˜æ•°ç›®å‚æ•°çš„æ¨¡æ¿å‡½æ•°æˆ–æ¨¡æ¿ç±» 
+          å¯å˜æ•°ç›®çš„å‚æ•°è¢«ç§°ä¸ºå‚æ•°åŒ…(åŒ…æ‹¬æ¨¡æ¿å‚æ•°åŒ…ä¸Žå‡½æ•°å‚æ•°åŒ…)
+          ç¬¦å·è¡¨ç¤º:...çœç•¥å·  typename.../class...
 
-          ¾ÙÀý£º
-          template<typename T,typename...Args>         //Args Ä£°å²ÎÊý°ü
-          void foo(const T& t,const Args&... rest);    //args º¯Êý²ÎÊý°ü
+          ä¸¾ä¾‹ï¼š
+          template<typename T,typename...Args>         //Args æ¨¡æ¿å‚æ•°åŒ…
+          void foo(const T& t,const Args&... rest);    //args å‡½æ•°å‚æ•°åŒ…
 
-          ±àÒëÆ÷´Óº¯ÊýµÄÊµ²ÎÍÆ¶ÏÄ£°å²ÎÊýÀàÐÍ
-          ¶ÔÓÚÒ»¸ö¿É±ä²ÎÊýÄ£°å£¬±àÒëÆ÷»¹»áÍÆ¶Ï°üÖÐ²ÎÊýµÄÊýÄ¿
+          ç¼–è¯‘å™¨ä»Žå‡½æ•°çš„å®žå‚æŽ¨æ–­æ¨¡æ¿å‚æ•°ç±»åž‹
+          å¯¹äºŽä¸€ä¸ªå¯å˜å‚æ•°æ¨¡æ¿ï¼Œç¼–è¯‘å™¨è¿˜ä¼šæŽ¨æ–­åŒ…ä¸­å‚æ•°çš„æ•°ç›®
           int i = 0;double d = 3.14;string s = "hello,slam";
-          foo(i,s,42,d);   //°üÖÐ3¸ö²ÎÊý
-          foo(s,42,"h1");  //°üÖÐ2¸ö²ÎÊý
-          foo(d,s);        //°üÖÐ1¸ö²ÎÊý
-          foo("hi");       //¿Õ°ü
-                                             //42ÒýÓÃÕÛµþ
+          foo(i,s,42,d);   //åŒ…ä¸­3ä¸ªå‚æ•°
+          foo(s,42,"h1");  //åŒ…ä¸­2ä¸ªå‚æ•°
+          foo(d,s);        //åŒ…ä¸­1ä¸ªå‚æ•°
+          foo("hi");       //ç©ºåŒ…
+                                             //42å¼•ç”¨æŠ˜å 
           void foo(const int&,const string&,const int&,const double&)
           void foo(const string&,const int&,const char[3]&);
           void foo(const double&,const string&);
           void foo(const char[3]&);
 
-          size_of...ÔËËã·û 
-          ×÷ÓÃ£º½âËã°üÖÐµÄÔªËØÊýÁ¿
-          sizeof...(Args); ÀàÐÍ²ÎÊýµÄÊýÄ¿
-          sizeof...(args); º¯Êý²ÎÊýµÄÊýÄ¿
+          size_of...è¿ç®—ç¬¦ 
+          ä½œç”¨ï¼šè§£ç®—åŒ…ä¸­çš„å…ƒç´ æ•°é‡
+          sizeof...(Args); ç±»åž‹å‚æ•°çš„æ•°ç›®
+          sizeof...(args); å‡½æ•°å‚æ•°çš„æ•°ç›®
 
-          ¿É±ä²ÎÊý°üÓë×ª·¢½áºÏÊ¹ÓÃ    ¾­µä×ª·¢°¸Àý£¡£¡£¡
+          å¯å˜å‚æ•°åŒ…ä¸Žè½¬å‘ç»“åˆä½¿ç”¨    ç»å…¸è½¬å‘æ¡ˆä¾‹ï¼ï¼ï¼
           template<typename...Args>
           void StrVec::emplace_back(Args&&...args)
           {
                 check_n_alloc();
                 alloc.construct(first_free++,std::forward<Args>(args)...);
-                //½«emplace_backµÄËùÓÐÊµ²Î×ª·¢¸øÁíÒ»¸öÃûÎªconstructµÄº¯Êý Íê³ÉËùÓÐÊµ¼Ê¹¤×÷
+                //å°†emplace_backçš„æ‰€æœ‰å®žå‚è½¬å‘ç»™å¦ä¸€ä¸ªåä¸ºconstructçš„å‡½æ•° å®Œæˆæ‰€æœ‰å®žé™…å·¥ä½œ
           }
-          ´ËÄ£Ê½Éú³ÉÈçÏÂÐÎÊ½µÄÔªËØ
+          æ­¤æ¨¡å¼ç”Ÿæˆå¦‚ä¸‹å½¢å¼çš„å…ƒç´ 
           std::forward<Ti>(ti);
-          ÆäÖÐTi±íÊ¾Ä£°å²ÎÊý°üµÄµÚi¸öÔªËØµÄÀàÐÍ ti±íÊ¾º¯Êý²ÎÊý°üÖÐµÚi¸öÔªËØ
+          å…¶ä¸­Tiè¡¨ç¤ºæ¨¡æ¿å‚æ•°åŒ…çš„ç¬¬iä¸ªå…ƒç´ çš„ç±»åž‹ tiè¡¨ç¤ºå‡½æ•°å‚æ•°åŒ…ä¸­ç¬¬iä¸ªå…ƒç´ 
 
-4¡¢Ä£°åÌØÀý»¯
+4ã€æ¨¡æ¿ç‰¹ä¾‹åŒ–
    
-   ¶¨Òå£ºÌØÀý»¯°æ±¾ÊÇÄ£°åÒ»¸ö¶ÀÁ¢µÄ¶¨Òå ÔÚÆäÖÐÒ»¸ö»ò¶à¸öÄ£°å²ÎÊý±»Ö¸¶¨ÎªÌØ¶¨µÄÀàÐÍ
-   Ç°Ìá£ºÔ­Ä£°åµÄÉùÃ÷±ØÐëÔÚ×÷ÓÃÓòÖÐ
-   Óï·¨£ºtemplate<> Ö¸³öÒªÎªÔ­Ä£°åµÄËùÓÐÄ£°å²ÎÊýÌá¹©Êµ²Î
-   ±¾ÖÊ£ºÒ»¸öÊµÀý(ÎªÔ­Ä£°åµÄÒ»¸öÌØÊâÊµÀýÌá¹©¶¨Òå)£¬¶ø²»ÊÇÖØÔØ
+   å®šä¹‰ï¼šç‰¹ä¾‹åŒ–ç‰ˆæœ¬æ˜¯æ¨¡æ¿ä¸€ä¸ªç‹¬ç«‹çš„å®šä¹‰ åœ¨å…¶ä¸­ä¸€ä¸ªæˆ–å¤šä¸ªæ¨¡æ¿å‚æ•°è¢«æŒ‡å®šä¸ºç‰¹å®šçš„ç±»åž‹
+   å‰æï¼šåŽŸæ¨¡æ¿çš„å£°æ˜Žå¿…é¡»åœ¨ä½œç”¨åŸŸä¸­
+   è¯­æ³•ï¼štemplate<> æŒ‡å‡ºè¦ä¸ºåŽŸæ¨¡æ¿çš„æ‰€æœ‰æ¨¡æ¿å‚æ•°æä¾›å®žå‚
+   æœ¬è´¨ï¼šä¸€ä¸ªå®žä¾‹(ä¸ºåŽŸæ¨¡æ¿çš„ä¸€ä¸ªç‰¹æ®Šå®žä¾‹æä¾›å®šä¹‰)ï¼Œè€Œä¸æ˜¯é‡è½½
 
-   ¾ÙÀý£º
+   ä¸¾ä¾‹ï¼š
    template<typename T>
    int compare(const T&,const T&);
 
    template<>int compare(const int&,const int&);
 
 
-   ²¿·ÖÌØÀý»¯£º
+   éƒ¨åˆ†ç‰¹ä¾‹åŒ–ï¼š
    template<typename T>class remove_reference;
-   template<typename T>class reomve_reference<T&>;  //²¿·ÖÌØÀý»¯³ö×óÖµÒýÓÃ°æ±¾
-   template<typename T>class reomve_reference<T&&>; //²¿·ÖÌØÀý»¯³öÓÒÖµÒýÓÃ°æ±¾
+   template<typename T>class reomve_reference<T&>;  //éƒ¨åˆ†ç‰¹ä¾‹åŒ–å‡ºå·¦å€¼å¼•ç”¨ç‰ˆæœ¬
+   template<typename T>class reomve_reference<T&&>; //éƒ¨åˆ†ç‰¹ä¾‹åŒ–å‡ºå³å€¼å¼•ç”¨ç‰ˆæœ¬
 
 
     */
@@ -588,7 +588,7 @@
 
 
 
-//StrBlobµÄÄ£°åÐ´·¨
+//StrBlobçš„æ¨¡æ¿å†™æ³•
 
 /*
 #include<iostream>
@@ -672,7 +672,7 @@ int main()
 
 /*
 
-//ÖØµã£º×Ô¼º¹¹½¨µÄÖÇÄÜÖ¸Õëshared_ptr
+//é‡ç‚¹ï¼šè‡ªå·±æž„å»ºçš„æ™ºèƒ½æŒ‡é’ˆshared_ptr
 
 #include<iostream>
 #include<string>
@@ -680,7 +680,7 @@ int main()
 
 template<typename T>class SharedPointer;
 
-struct Delete     //×Ô¶¨ÒåµÄÉ¾³ýÆ÷
+struct Delete     //è‡ªå®šä¹‰çš„åˆ é™¤å™¨
 {
     template<typename T>
     auto operator()(T* p)const
@@ -701,35 +701,35 @@ auto swap(SharedPointer<T>& lhs,SharedPointer<T>& rhs)
 template<typename T>
 class SharedPointer
 {
-    friend auto swap<T>(SharedPointer<T>&, SharedPointer<T>&); //ÓÑÔªµÄÉùÃ÷¹ØÏµ
+    friend auto swap<T>(SharedPointer<T>&, SharedPointer<T>&); //å‹å…ƒçš„å£°æ˜Žå…³ç³»
 public:
     SharedPointer():
         ptr(nullptr),ref_count(new std::size_t(1)),deleter(Delete()){}
-    //Delete()ÊÇÒ»¸öÄ¬ÈÏ³õÊ¼»¯µÄ¿Éµ÷ÓÃ¶ÔÏó ´«Èë·º»¯µÄÄ£°åÖÐdeleter
-    explicit SharedPointer(T* raw_ptr): //ÀûÓÃ·ÇÖÇÄÜÖ¸Õë½øÐÐ¹¹Ôì
+    //Delete()æ˜¯ä¸€ä¸ªé»˜è®¤åˆå§‹åŒ–çš„å¯è°ƒç”¨å¯¹è±¡ ä¼ å…¥æ³›åŒ–çš„æ¨¡æ¿ä¸­deleter
+    explicit SharedPointer(T* raw_ptr): //åˆ©ç”¨éžæ™ºèƒ½æŒ‡é’ˆè¿›è¡Œæž„é€ 
         ptr(raw_ptr),ref_count(new std::size_t(1)),deleter(Delete()){}
 
     SharedPointer(const SharedPointer& other):
         ptr(other.ptr),ref_count(other.ref_count),deleter(other.deleter)
     {
-        ++* ref_count; //ÏÈ³õÊ¼¿½±´¹¹Ôì ÔÙ¼Ó1 Ïàµ±ÓÚref_countÁ½Õß¹²Í¬Ö¸ÏòµÄsize_t£¨Ò²¾ÍÊÇÒýÓÃ´ÎÊý+1£©
+        ++* ref_count; //å…ˆåˆå§‹æ‹·è´æž„é€  å†åŠ 1 ç›¸å½“äºŽref_countä¸¤è€…å…±åŒæŒ‡å‘çš„size_tï¼ˆä¹Ÿå°±æ˜¯å¼•ç”¨æ¬¡æ•°+1ï¼‰
     }
-    SharedPointer(SharedPointer&& other)noexcept:  //noexcept±£Ö¤²»Å×³öÒì³£
+    SharedPointer(SharedPointer&& other)noexcept:  //noexceptä¿è¯ä¸æŠ›å‡ºå¼‚å¸¸
         ptr(other.ptr),ref_count(other.ref_count),deleter(std::move(other.deleter))
     {
-        other.ptr = nullptr; //´¦ÀíµôÒÆ¶¯ºóµÄÔ´¶ÔÏó
+        other.ptr = nullptr; //å¤„ç†æŽ‰ç§»åŠ¨åŽçš„æºå¯¹è±¡
         other.ref_count = nullptr;
-        //Ö»ÓÐdeleterÉ¾³ýÆ÷ÊÇÕæÕýµÄÒÆ¶¯ÁË ÆäËûÁ½¸öÖ¸Õë»¹ÊÇ¿½±´ ÎÞÐ§ÂÊÎÊÌâ Ö»Òª´¦Àí½«ÆäÖÃ¿Õ¼´¿É
+        //åªæœ‰deleteråˆ é™¤å™¨æ˜¯çœŸæ­£çš„ç§»åŠ¨äº† å…¶ä»–ä¸¤ä¸ªæŒ‡é’ˆè¿˜æ˜¯æ‹·è´ æ— æ•ˆçŽ‡é—®é¢˜ åªè¦å¤„ç†å°†å…¶ç½®ç©ºå³å¯
     }
 
-    SharedPointer& operator=(const SharedPointer& rhs) //¿½±´¸³ÖµÔËËã·ûÖØÔØ
+    SharedPointer& operator=(const SharedPointer& rhs) //æ‹·è´èµ‹å€¼è¿ç®—ç¬¦é‡è½½
     {
         ++* rhs.ref_count;
-        decrement_and_destroy(); //Èç¹û×Ô¼ºÊÇ×îºóÒ»¸öÖ¸Õë ¾ÍÖ´ÐÐÎö¹¹
+        decrement_and_destroy(); //å¦‚æžœè‡ªå·±æ˜¯æœ€åŽä¸€ä¸ªæŒ‡é’ˆ å°±æ‰§è¡Œæžæž„
         ptr = rhs.ptr, ref_count = rhs.ref_count, deleter = rhs.deleter;
         return *this;
     }
-    SharedPointer& operator=(SharedPointer&& rhs) noexcept  //ÒÆ¶¯¸³ÖµÔËËã·ûÖØÔØ
+    SharedPointer& operator=(SharedPointer&& rhs) noexcept  //ç§»åŠ¨èµ‹å€¼è¿ç®—ç¬¦é‡è½½
     {
         ::swap(*this,rhs);
         rhs.decrement_and_destroy();
@@ -762,7 +762,7 @@ public:
     }
 
 
-    //ÏÂÃæÊÇÖØÖÃ
+    //ä¸‹é¢æ˜¯é‡ç½®
     auto reset()
     {
         decrement_and_destroy();
@@ -773,10 +773,10 @@ public:
         ptr = pointer;
         ref_count = new std::size_t(1);
     }
-    auto reset(T* pointer, const std::function<void(T*)>& d) //´«ÈëÒ»¸öÉ¾³ýÆ÷
+    auto reset(T* pointer, const std::function<void(T*)>& d) //ä¼ å…¥ä¸€ä¸ªåˆ é™¤å™¨
     {
         reset(pointer);
-        deleter = d; //Ïàµ±ÓÚÖØ¹¹É¾³ýÆ÷
+        deleter = d; //ç›¸å½“äºŽé‡æž„åˆ é™¤å™¨
     }
     ~SharedPointer()
     {
@@ -786,10 +786,10 @@ public:
 private:
     T* ptr;
     std::size_t* ref_count;
-    std::function<void(T*)>deleter; //ÀàÄ£°æstd::functionÊÇÒ»ÖÖÍ¨ÓÃ¡¢¶àÌ¬µÄº¯Êý·â×°¡£std::functionµÄÊµÀý¿ÉÒÔ¶ÔÈÎºÎ¿ÉÒÔµ÷ÓÃµÄÄ¿±êÊµÌå½øÐÐ´æ´¢¡¢¸´ÖÆ¡¢ºÍµ÷ÓÃ²Ù×÷£¬ÕâÐ©Ä¿±êÊµÌå°üÀ¨ÆÕÍ¨º¯Êý¡¢Lambda±í´ïÊ½¡¢º¯ÊýÖ¸Õë¡¢ÒÔ¼°ÆäËüº¯Êý¶ÔÏóµÈ
-    //C++11ÖÐÍÆ³östd::functionÊÇÎªÁË·º»¯º¯Êý¶ÔÏó£¬º¯ÊýÖ¸Õë£¬ÒýÓÃº¯Êý£¬³ÉÔ±º¯ÊýµÄÖ¸Õë
+    std::function<void(T*)>deleter; //ç±»æ¨¡ç‰ˆstd::functionæ˜¯ä¸€ç§é€šç”¨ã€å¤šæ€çš„å‡½æ•°å°è£…ã€‚std::functionçš„å®žä¾‹å¯ä»¥å¯¹ä»»ä½•å¯ä»¥è°ƒç”¨çš„ç›®æ ‡å®žä½“è¿›è¡Œå­˜å‚¨ã€å¤åˆ¶ã€å’Œè°ƒç”¨æ“ä½œï¼Œè¿™äº›ç›®æ ‡å®žä½“åŒ…æ‹¬æ™®é€šå‡½æ•°ã€Lambdaè¡¨è¾¾å¼ã€å‡½æ•°æŒ‡é’ˆã€ä»¥åŠå…¶å®ƒå‡½æ•°å¯¹è±¡ç­‰
+    //C++11ä¸­æŽ¨å‡ºstd::functionæ˜¯ä¸ºäº†æ³›åŒ–å‡½æ•°å¯¹è±¡ï¼Œå‡½æ•°æŒ‡é’ˆï¼Œå¼•ç”¨å‡½æ•°ï¼Œæˆå‘˜å‡½æ•°çš„æŒ‡é’ˆ
 
-    auto decrement_and_destroy() //Ö´ÐÐ×îºóÒ»¸öÒýÓÃÖ¸ÕëµÄÏú»Ù¹¤×÷
+    auto decrement_and_destroy() //æ‰§è¡Œæœ€åŽä¸€ä¸ªå¼•ç”¨æŒ‡é’ˆçš„é”€æ¯å·¥ä½œ
     {
         if (ptr && 0 == -- * ref_count)
         {
@@ -822,7 +822,7 @@ int main()
 */
 
 
-//¹¹½¨ÖÇÄÜÖ¸Õëunique_ptr
+//æž„å»ºæ™ºèƒ½æŒ‡é’ˆunique_ptr
 
 /*
 
@@ -833,7 +833,7 @@ int main()
 template<typename T,typename D>class unique_pointer;
 template<typename T,typename D>
 void swap(unique_pointer<T, D>& lhs, unique_pointer<T, D>& rhs);
-struct DebugDelete     //×Ô¶¨ÒåµÄÉ¾³ýÆ÷
+struct DebugDelete     //è‡ªå®šä¹‰çš„åˆ é™¤å™¨
 {
     template<typename T>
     auto operator()(T* p)const
@@ -848,21 +848,21 @@ class unique_pointer
     friend void swap<T, D>(unique_pointer<T, D>& lhs, unique_pointer<T, D>& rhs);
 
 public:
-    unique_pointer(const unique_pointer&) = delete; //É¾³ý¿½±´¹¹Ôì
-    unique_pointer& operator=(const unique_pointer&) = delete; //É¾³ý¿½±´¸³ÖµÔËËã·û
+    unique_pointer(const unique_pointer&) = delete; //åˆ é™¤æ‹·è´æž„é€ 
+    unique_pointer& operator=(const unique_pointer&) = delete; //åˆ é™¤æ‹·è´èµ‹å€¼è¿ç®—ç¬¦
 
     unique_pointer() = default;
-    explicit unique_pointer(T* up):ptr(up){}//½ÓÊÜ·ÇÖÇÄÜÖ¸ÕëµÄÓÐ²Î¹¹Ôì
+    explicit unique_pointer(T* up):ptr(up){}//æŽ¥å—éžæ™ºèƒ½æŒ‡é’ˆçš„æœ‰å‚æž„é€ 
 
-    //ÒÆ¶¯²Ù×÷
+    //ç§»åŠ¨æ“ä½œ
     unique_pointer(unique_pointer&& up)noexcept
-        :ptr(up.ptr) {up.ptr = nullptr;} //Êµ¼ÊÉÏ²ÉÓÃµÄÊÇÖ¸Õë¼òÒ×ÒÆ¶¯·½Ê½ ¿½±´ È»ºóÎö¹¹
+        :ptr(up.ptr) {up.ptr = nullptr;} //å®žé™…ä¸Šé‡‡ç”¨çš„æ˜¯æŒ‡é’ˆç®€æ˜“ç§»åŠ¨æ–¹å¼ æ‹·è´ ç„¶åŽæžæž„
     unique_pointer& operator=(unique_pointer&& rhs)noexcept;
 
     unique_pointer& operator=(std::nullptr_t n)noexcept;
 
 
-    //ÏÂ½ÓÔËËã·ûÖØÔØµÈ³£¹æ²Ù×÷
+    //ä¸‹æŽ¥è¿ç®—ç¬¦é‡è½½ç­‰å¸¸è§„æ“ä½œ
     T& operator*()const { return *ptr; }
     T* operator->()const { return &this->operator*(); }
     T* get()const { return ptr; }
@@ -883,11 +883,11 @@ public:
     T* release();
     ~unique_pointer()
     {
-        deleter(ptr); //ÀûÓÃÉ¾³ýÆ÷É¾³ý
+        deleter(ptr); //åˆ©ç”¨åˆ é™¤å™¨åˆ é™¤
     }
 private:
     T* ptr = nullptr;
-    D deleter = D();  //Ä¬ÈÏ²ÎÊýD¿Éµ÷ÓÃ¶ÔÏóµÄÄ¬ÈÏÄ¬ÈÏ³õÊ¼»¯ D´ú±í´«ÈëµÄÊµ²ÎÊÇ¿Éµ÷ÓÃ¶ÔÏó
+    D deleter = D();  //é»˜è®¤å‚æ•°Då¯è°ƒç”¨å¯¹è±¡çš„é»˜è®¤é»˜è®¤åˆå§‹åŒ– Dä»£è¡¨ä¼ å…¥çš„å®žå‚æ˜¯å¯è°ƒç”¨å¯¹è±¡
 };
 
 
